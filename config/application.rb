@@ -34,5 +34,8 @@ module Checkip
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Don't generate Sprockets assets
+    config.generators.assets = nil
   end
 end

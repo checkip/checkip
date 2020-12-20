@@ -1,7 +1,7 @@
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
-  source_path: app/javascript
+  source_path: frontend
   source_entry_path: packs
   public_root_path: public
   public_output_path: packs
@@ -50,6 +50,9 @@ default: &default
 development:
   <<: *default
   compile: true
+
+  # Extract and emit a css file
+  extract_css: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
