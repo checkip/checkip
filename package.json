@@ -4,9 +4,13 @@
   "version": "0.1.0",
   "scripts": {
     "lint:css": "stylelint \"frontend/**/*.scss\"",
-    "lint:js": "eslint \"frontend/**/*.js\""
+    "lint:js": "eslint \"frontend/**/*.js\"",
+    "lint:ruby": "bundle exec rubocop --parallel"
   },
   "lint-staged": {
+    "*.rb": [
+      "rubocop --force-exclusion"
+    ],
     "frontend/**/*.js": [
       "prettier --write",
       "eslint"

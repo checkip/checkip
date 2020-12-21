@@ -1,0 +1,35 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - bin/*
+    - config.ru
+    - config/**/*
+    - db/**/*
+    - lib/tasks/*
+    - node_modules/**/*
+    - Rakefile
+    - spec/spec_helper.rb
+    - vendor/**/*
+  NewCops: enable
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Layout/LineLength:
+  Max: 100
+
+Metrics/BlockLength:
+  IgnoredMethods: [FactoryBot.define, factory, RSpec.describe, context, describe]
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
