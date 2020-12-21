@@ -12,16 +12,27 @@ gem 'jbuilder', '>= 2.7'
 gem 'puma', '~> 5.1'
 gem 'webpacker', '~> 5.2'
 
-group :development, :test do
-  gem 'byebug'
-  gem 'dotenv-rails'
-end
-
 group :development do
+  gem 'pry-rails'
   gem 'rack-mini-profiler'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem 'web-console'
+end
+
+group :development, :test do
+  gem 'byebug'
+  gem 'dotenv-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'fuubar'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end

@@ -37,3 +37,6 @@ Procfile
 
 # Ignore environment variables.
 .env
+
+# Ignore simplecov generated files.
+coverage
