@@ -1,0 +1,29 @@
+extends:
+  - eslint:recommended
+  - plugin:prettier/recommended
+
+env:
+  browser: true
+  es6: true
+
+globals:
+  Rails: readonly
+
+parser: "@babel/eslint-parser"
+
+settings:
+  import/resolver:
+    webpack:
+      config:
+        resolve:
+          modules:
+            - frontend
+            - node_modules
+
+rules:
+  curly:
+    - error
+    - multi-line
+  no-console: error
+  no-template-curly-in-string: error
+  no-var: error
