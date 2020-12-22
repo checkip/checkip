@@ -5,7 +5,8 @@
   "scripts": {
     "lint:css": "stylelint \"frontend/**/*.scss\"",
     "lint:js": "eslint \"frontend/**/*.js\"",
-    "lint:ruby": "bundle exec rubocop --parallel"
+    "lint:ruby": "bundle exec rubocop --parallel",
+    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "lint-staged": {
     "*.rb": [
@@ -37,6 +38,7 @@
     "@babel/eslint-parser": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "conventional-changelog-cli": "^2.1.1",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-import-resolver-webpack": "^0.13.0",
