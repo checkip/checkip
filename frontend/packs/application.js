@@ -1,4 +1,4 @@
 import 'init';
 
-import 'components/home/home';
+import 'components/checker/checker';
 import 'components/layout-default/layout-default';
