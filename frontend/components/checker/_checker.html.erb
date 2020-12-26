@@ -1,2 +1,31 @@
-<%= checker.ip %><br>
-<%= checker.fetch_hostname %>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+      <div class="mdc-data-table mdc-elevation--z4 ckp-table-full-width">
+        <div class="mdc-data-table__table-container">
+          <table class="mdc-data-table__table" aria-label="Dessert calories">
+            <thead>
+              <tr class="mdc-data-table__header-row">
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Parameter</th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody class="mdc-data-table__content">
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">IP Address</th>
+                <td class="mdc-data-table__cell"><%= checker.ip %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">Hostname</th>
+                <td class="mdc-data-table__cell"><%= checker.fetch_hostname %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+      <div class="ckp-json-output mdc-elevation--z4"><pre><%= checker_json %></pre></div>
+    </div>
+  </div>
+</div>

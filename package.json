@@ -27,6 +27,15 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@material/data-table": "^8.0.0",
+    "@material/elevation": "^8.0.0",
+    "@material/icon-button": "^8.0.0",
+    "@material/layout-grid": "^8.0.0",
+    "@material/top-app-bar": "^8.0.0",
+    "@material/typography": "^8.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "normalize.css": "^8.0.1",

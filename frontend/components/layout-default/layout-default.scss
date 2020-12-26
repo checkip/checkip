@@ -1,1 +1,30 @@
-// TO DO
+@use "../init/stylesheets/checkip-base";
+
+@use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/top-app-bar";
+
+@include icon-button.core-styles;
+
+.mdc-top-app-bar.ckp-top-app-bar {
+  @include top-app-bar.ink-color(checkip-base.$top-app-bar-ink-color);
+}
+
+.ckp-header-fixed {
+  margin: 0 auto;
+  max-width: checkip-base.$max-width-xl;
+  position: inherit;
+}
+
+.ckp-layout-fixed {
+  margin: 0 auto;
+  max-width: checkip-base.$max-width-xl;
+}
+
+.ckp-powered-by {
+  text-align: center;
+}
+
+.ckp-heart-icon {
+  color: checkip-base.$heart-icon-color;
+}

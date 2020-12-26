@@ -1,0 +1,24 @@
+@use "./checkip-base";
+
+@use "@material/theme" with (
+  $primary: checkip-base.$core-primary-color,
+  $secondary: checkip-base.$core-secondary-color,
+  $surface: checkip-base.$core-surface,
+  $on-primary: checkip-base.$core-on-primary,
+  $on-surface: checkip-base.$core-on-surface,
+);
+
+@use "@material/typography" with (
+  $font-family: checkip-base.$body-font,
+);
+
+body {
+  background-color: checkip-base.$core-primary-color;
+  color: checkip-base.$core-on-primary;
+  font-family: checkip-base.$body-font;
+}
+
+a {
+  color: checkip-base.$core-secondary-color;
+  text-decoration: none;
+}

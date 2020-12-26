@@ -1,1 +1,31 @@
-// TO DO
+@use "../init/stylesheets/checkip-base";
+
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/elevation/mdc-elevation";
+@use "@material/data-table/data-table";
+
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+
+.ckp-table-full-width {
+  border: 0;
+  width: 100%;
+}
+
+.ckp-json-output {
+  background-color: checkip-base.$core-surface;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: checkip-base.$core-on-surface;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 16px;
+  position: relative;
+  white-space: pre;
+  width: 100%;
+
+  pre {
+    font-family: checkip-base.$mono-font;
+    margin: 0;
+  }
+}
