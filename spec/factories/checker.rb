@@ -9,5 +9,7 @@ FactoryBot.define do
     factory :checker_invalid do
       ip { 'ip address' }
     end
+
+    initialize_with { new(ip: ip) }
   end
 end

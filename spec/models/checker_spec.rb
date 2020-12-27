@@ -27,17 +27,17 @@ RSpec.describe Checker, type: :model do
     end
   end
 
-  describe '#fetch_hostname' do
-    it 'returns hostname for a given IPv4' do
-      expect(ipv4_cf.fetch_hostname).to eq 'one.one.one.one'
+  describe 'hostname' do
+    it 'is a hostname when resolve ipv4' do
+      expect(ipv4_cf.hostname).to eq 'one.one.one.one'
     end
 
-    it 'returns hostname for a given IPv6' do
-      expect(ipv6_cf.fetch_hostname).to eq 'dns64.cloudflare-dns.com'
+    it 'is a hostname when resolve ipv6' do
+      expect(ipv6_cf.hostname).to eq 'dns64.cloudflare-dns.com'
     end
 
-    it 'returns nil for unknown hostname' do
-      expect(ipv6_unk.fetch_hostname).to be_nil
+    it "is nil when can't resolve" do
+      expect(ipv6_unk.hostname).to be_nil
     end
   end
 end
