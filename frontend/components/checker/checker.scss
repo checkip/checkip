@@ -7,9 +7,18 @@
 @include data-table.core-styles;
 @include data-table.theme-baseline;
 
-.ckp-table-full-width {
+.ckp-table-container {
   border: 0;
   width: 100%;
+}
+
+.ckp-table {
+  table-layout: auto;
+
+  td {
+    white-space: pre-wrap;
+    width: 100%;
+  }
 }
 
 .ckp-json-output {
@@ -21,11 +30,11 @@
   flex-direction: column;
   padding: 16px;
   position: relative;
-  white-space: pre;
   width: 100%;
 
   pre {
     font-family: checkip-base.$mono-font;
     margin: 0;
+    white-space: pre-wrap;
   }
 }
