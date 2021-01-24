@@ -35,7 +35,7 @@ class Checker
 
     def fetch_geo_data(ip)
       geo_db ||= MaxMindDB.new(
-        Rails.root.join(
+        File.join(
           ENV.fetch('DBIP_CITY_DB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
         )
       )
@@ -44,7 +44,7 @@ class Checker
 
     def fetch_asn_data(ip)
       asn_db ||= MaxMindDB.new(
-        Rails.root.join(
+        File.join(
           ENV.fetch('DBIP_ASN_DB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
         )
       )
