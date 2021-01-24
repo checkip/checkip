@@ -19,6 +19,26 @@
                 <th class="mdc-data-table__cell" scope="row">Hostname</th>
                 <td class="mdc-data-table__cell"><%= checker.hostname %></td>
               </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">Country</th>
+                <td class="mdc-data-table__cell"><%= checker.country %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">Region</th>
+                <td class="mdc-data-table__cell"><%= checker.region %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">City</th>
+                <td class="mdc-data-table__cell"><%= checker.city %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">AS Number</th>
+                <td class="mdc-data-table__cell"><%= checker.asn[:asn] %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">AS Organization</th>
+                <td class="mdc-data-table__cell"><%= checker.asn[:name] %></td>
+              </tr>
             </tbody>
           </table>
         </div>

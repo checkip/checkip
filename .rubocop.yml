@@ -22,8 +22,14 @@ Layout/IndentationConsistency:
 Layout/LineLength:
   Max: 100
 
+Metrics/AbcSize:
+  Enabled: false
+
 Metrics/BlockLength:
-  IgnoredMethods: [FactoryBot.define, factory, RSpec.describe, context, describe]
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
