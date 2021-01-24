@@ -20,24 +20,40 @@
                 <td class="mdc-data-table__cell"><%= checker.hostname %></td>
               </tr>
               <tr class="mdc-data-table__row">
-                <th class="mdc-data-table__cell" scope="row">Country</th>
-                <td class="mdc-data-table__cell"><%= checker.country %></td>
+                <th class="mdc-data-table__cell" scope="row">City</th>
+                <td class="mdc-data-table__cell"><%= checker.geolocation.city.name %></td>
               </tr>
               <tr class="mdc-data-table__row">
                 <th class="mdc-data-table__cell" scope="row">Region</th>
-                <td class="mdc-data-table__cell"><%= checker.region %></td>
+                <td class="mdc-data-table__cell"><%= checker.geolocation.subdivisions.most_specific.name %></td>
               </tr>
               <tr class="mdc-data-table__row">
-                <th class="mdc-data-table__cell" scope="row">City</th>
-                <td class="mdc-data-table__cell"><%= checker.city %></td>
+                <th class="mdc-data-table__cell" scope="row">Country</th>
+                <td class="mdc-data-table__cell"><%= checker.geolocation.country.name %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">Country code</th>
+                <td class="mdc-data-table__cell"><%= checker.geolocation.country.iso_code %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">Continent</th>
+                <td class="mdc-data-table__cell"><%= checker.geolocation.continent.name %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">Continent code</th>
+                <td class="mdc-data-table__cell"><%= checker.geolocation.continent.code %></td>
               </tr>
               <tr class="mdc-data-table__row">
                 <th class="mdc-data-table__cell" scope="row">AS Number</th>
-                <td class="mdc-data-table__cell"><%= checker.asn[:asn] %></td>
+                <td class="mdc-data-table__cell"><%= checker.asn['autonomous_system_number'] %></td>
               </tr>
               <tr class="mdc-data-table__row">
                 <th class="mdc-data-table__cell" scope="row">AS Organization</th>
-                <td class="mdc-data-table__cell"><%= checker.asn[:name] %></td>
+                <td class="mdc-data-table__cell"><%= checker.asn['autonomous_system_organization'] %></td>
+              </tr>
+              <tr class="mdc-data-table__row">
+                <th class="mdc-data-table__cell" scope="row">AS Network</th>
+                <td class="mdc-data-table__cell"><%= checker.asn['network'] %></td>
               </tr>
             </tbody>
           </table>

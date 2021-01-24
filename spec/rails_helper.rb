@@ -67,4 +67,20 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+
+  config.before(:suite) do
+    FileUtils.mkdir_p('tmp/fixtures')
+    FileUtils.cp(
+      'spec/fixtures/city-test-dummy.mmdb',
+      "tmp/fixtures/dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+    )
+    FileUtils.cp(
+      'spec/fixtures/asn-test-dummy.mmdb',
+      "tmp/fixtures/dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+    )
+  end
+
+  config.after(:suite) do
+    FileUtils.rm_rf('tmp/fixtures', secure: true)
+  end
 end

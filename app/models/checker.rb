@@ -5,25 +5,23 @@ class Checker
 
   def initialize(ip:)
     @ip = ip
-    geo = fetch_geo_data(ip)
-    asn = fetch_asn_data(ip)
-
     @hostname = fetch_hostname(ip)
-    @city = geo.city.name
-    @region = geo.subdivisions.most_specific.name
-    @country = geo.country.iso_code
-    @loc = "#{geo.location.latitude},#{geo.location.longitude}"
-    @asn = {
-      asn: asn['autonomous_system_number'],
-      name: asn['autonomous_system_organization'],
-      route: asn['network']
-    }
   end
 
   attr_accessor :ip
-  attr_reader :hostname, :city, :region, :country, :loc, :asn
+  attr_reader :hostname
 
   validates :ip, presence: true, format: { with: Resolv::AddressRegex }
+
+  # Geolocation
+  def geolocation
+    fetch_geo_data(ip)
+  end
+
+  # Autonomous System Number
+  def asn
+    fetch_asn_data(ip)
+  end
 
   private
 
