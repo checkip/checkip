@@ -2,26 +2,6 @@
 
 @use "@material/layout-grid/mdc-layout-grid";
 @use "@material/elevation/mdc-elevation";
-@use "@material/data-table/data-table";
-
-@include data-table.core-styles;
-@include data-table.theme-baseline;
-
-.ckp-table-container {
-  border: 0;
-  width: 100%;
-}
-
-.ckp-table {
-  table-layout: auto;
-
-  td {
-    font-size: 1rem;
-    font-weight: 700;
-    white-space: pre-wrap;
-    width: 100%;
-  }
-}
 
 .ckp-json-output {
   background-color: checkip-base.$core-surface;
