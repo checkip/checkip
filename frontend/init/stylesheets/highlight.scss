@@ -1,0 +1,29 @@
+$pn-nord0: #2e3440;
+$ss-nord4: #d8dee9;
+$fr-nord8: #88c0d0;
+$au-nord13: #ebcb8b;
+$au-nord14: #a3be8c;
+
+.ckp-highlight {
+  background-color: $pn-nord0;
+
+  .p {
+    color: $ss-nord4;
+  }
+
+  .nl {
+    color: $fr-nord8;
+  }
+
+  .s2 {
+    color: $au-nord14;
+  }
+
+  .se {
+    color: $au-nord13;
+  }
+
+  .w {
+    color: #bbb;
+  }
+}

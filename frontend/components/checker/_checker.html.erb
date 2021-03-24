@@ -1,7 +1,7 @@
 <div class="mdc-layout-grid">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="ckp-json-output mdc-elevation--z4"><pre><%= checker_json(checker) %></pre></div>
+      <div class="ckp-json-output ckp-highlight mdc-elevation--z4"><pre><%= raw rougify(checker_json(checker), 'json') %></pre></div>
     </div>
   </div>
 </div>

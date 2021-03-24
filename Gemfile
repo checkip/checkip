@@ -11,6 +11,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jbuilder', '>= 2.7'
 gem 'maxminddb', '~> 0.1'
 gem 'puma', '~> 5.1'
+gem 'rouge', '~> 3.26'
 gem 'webpacker', '~> 5.2'
 
 group :development do
