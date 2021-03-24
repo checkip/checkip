@@ -1,13 +1,7 @@
 <div class="mdc-layout-grid">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="ckp-json-output mdc-elevation--z4"><pre><%= checker_json %></pre></div>
-    </div>
-    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="ckp-json-output mdc-elevation--z4"><pre><%= JSON.pretty_generate(@checker.geolocation.instance_values['raw']) %></pre></div>
-    </div>
-    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="ckp-json-output mdc-elevation--z4"><pre><%= JSON.pretty_generate(@checker.asn.instance_values['raw']) %></pre></div>
+      <div class="ckp-json-output mdc-elevation--z4"><pre><%= checker_json(checker) %></pre></div>
     </div>
   </div>
 </div>
