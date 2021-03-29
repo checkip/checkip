@@ -1,3 +1,14 @@
+# [0.3.0](https://github.com/checkip/checkip/compare/v0.2.0...v0.3.0) (2021-03-29)
+
+
+### Features
+
+* **ux:** highlight json data ([259d97c](https://github.com/checkip/checkip/commit/259d97ce62f06ae52cccdba4df9a3e4520e16bf0))
+* **ux:** remove normalize dependency ([2f94d5f](https://github.com/checkip/checkip/commit/2f94d5fc2baa39f06b7a6393effe22d04909591d))
+* **ux:** update data presentation format ([c03b0c8](https://github.com/checkip/checkip/commit/c03b0c81c3283ed7e861c891926d4a19650dffbb))
+
+
+
 # [0.2.0](https://github.com/checkip/checkip/compare/v0.1.0...v0.2.0) (2021-01-24)
 
 
