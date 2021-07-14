@@ -36,7 +36,7 @@
     "@material/top-app-bar": "^10.0.0",
     "@material/typography": "^10.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.2.1",
+    "@rails/webpacker": "5.4.0",
     "resolve-url-loader": "^3.1.2",
     "sass": "^1.30.0"
   },
