@@ -13,7 +13,7 @@ environment.loaders
   .find(item => item.loader === "sass-loader")
   .options = {
     sourceMap: true,
-    webpackImporter: false,
+    webpackImporter: true,
     sassOptions: {
       includePaths: ["./node_modules"],
     },
