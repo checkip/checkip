@@ -12,6 +12,7 @@ AllCops:
     - lib/tasks/*
     - node_modules/**/*
     - Rakefile
+    - spec/i18n_spec.rb
     - spec/spec_helper.rb
     - vendor/**/*
   NewCops: enable

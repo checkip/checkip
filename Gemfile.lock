@@ -98,8 +98,19 @@ GEM
       ruby-progressbar (~> 1.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    highline (2.0.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    i18n-tasks (0.9.34)
+      activesupport (>= 4.0.2)
+      ast (>= 2.1.0)
+      erubi
+      highline (>= 2.0.0)
+      i18n
+      parser (>= 2.2.3.0)
+      rails-i18n
+      rainbow (>= 2.2.2, < 4.0)
+      terminal-table (>= 1.5.1)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     loofah (2.10.0)
@@ -159,6 +170,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (6.0.0)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 7)
     railties (6.1.4)
       actionpack (= 6.1.4)
       activesupport (= 6.1.4)
@@ -225,6 +239,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    terminal-table (3.0.1)
+      unicode-display_width (>= 1.1.1, < 3)
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -257,6 +273,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   fuubar
+  i18n-tasks
   jbuilder (>= 2.7)
   maxminddb (~> 0.1)
   meta-rails (~> 2.0)

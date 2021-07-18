@@ -2,7 +2,7 @@
   <header class="mdc-top-app-bar ckp-header-fixed">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <span class="mdc-top-app-bar__title">CheckIP.info</span>
+        <span class="mdc-top-app-bar__title"><%= t('pages.application.core.brand') %></span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
         <button class="mdc-icon-button" aria-label="Help" id="help-link"><i class="fas fa-question-circle"></i></button>
@@ -12,7 +12,7 @@
   </header>
   <main class="ckp-layout-fixed">
     <%= yield %>
-    <div class="ckp-powered-by">Made with <span class="ckp-heart-icon"><i class="fas fa-heart"></i></span> and <%= link_to 'CheckIP', 'https://github.com/checkip/checkip' %></div>
-    <div class="ckp-powered-by">IP Geolocation by <a href='https://db-ip.com'>DB-IP</a></div>
+    <div class="ckp-powered-by"><%= t('pages.application.core.made_with_html', heart: tag.span(tag.i(class: 'fas fa-heart'), class: 'ckp-heart-icon'), checkip: (link_to 'CheckIP', 'https://github.com/checkip/checkip')) %></div>
+    <div class="ckp-powered-by"><%= t('pages.application.core.ip_geolocation_by_html', db_source_url: link_to(t('pages.application.core.ip_geolocation_brand'), t('pages.application.core.ip_geolocation_source'))) %></div>
   </main>
 </div>

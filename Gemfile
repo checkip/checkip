@@ -16,6 +16,7 @@ gem 'rouge', '~> 3.26'
 gem 'webpacker', '~> 5.2'
 
 group :development do
+  gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rack-mini-profiler'
   gem 'rubocop', require: false
