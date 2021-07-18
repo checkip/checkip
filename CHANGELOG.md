@@ -1,3 +1,19 @@
+# [0.4.0](https://github.com/checkip/checkip/compare/v0.3.0...v0.4.0) (2021-07-18)
+
+
+### Bug Fixes
+
+* **ux:** update scss paths ([71a795c](https://github.com/checkip/checkip/commit/71a795cf50e442a970611dbeed0805899de7d300))
+
+
+### Features
+
+* **core:** base meta tags ([e756396](https://github.com/checkip/checkip/commit/e7563963024f43754f49dba44d8445d1a17e6770))
+* **core:** upgrade to ruby 3.0.2 ([c09ac8c](https://github.com/checkip/checkip/commit/c09ac8c8a0c2b5f11cca36ae97034704c62189ae))
+* **i18n:** base i18n support ([17a207d](https://github.com/checkip/checkip/commit/17a207d5d2b0c25878925f6fc5014f6f5a65554c))
+
+
+
 # [0.3.0](https://github.com/checkip/checkip/compare/v0.2.0...v0.3.0) (2021-03-29)
 
 
