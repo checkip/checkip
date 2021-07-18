@@ -10,6 +10,7 @@ gem 'rails', '~> 6.1.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jbuilder', '>= 2.7'
 gem 'maxminddb', '~> 0.1'
+gem 'meta-rails', '~> 2.0'
 gem 'puma', '~> 5.1'
 gem 'rouge', '~> 3.26'
 gem 'webpacker', '~> 5.2'
