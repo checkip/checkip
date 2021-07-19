@@ -34,7 +34,7 @@ class Checker
     def fetch_geo_data(ip)
       geo_db ||= MaxMindDB.new(
         File.join(
-          ENV.fetch('DBIP_CITY_DB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+          ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
         )
       )
       geo_db.lookup(ip)
@@ -43,7 +43,7 @@ class Checker
     def fetch_asn_data(ip)
       asn_db ||= MaxMindDB.new(
         File.join(
-          ENV.fetch('DBIP_ASN_DB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+          ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
         )
       )
       asn_db.lookup(ip)

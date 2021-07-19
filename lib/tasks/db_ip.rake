@@ -9,7 +9,7 @@ namespace :db_ip do
     )
 
     city_lite_path = File.join(
-      ENV.fetch('DBIP_CITY_DB_PATH'),
+      ENV.fetch('DBIP_MMDB_PATH'),
       "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb.gz"
     )
 
@@ -21,7 +21,7 @@ namespace :db_ip do
     Zlib::GzipReader.open(city_lite_path) do |gz|
       IO.binwrite(
         File.join(
-          ENV.fetch('DBIP_ASN_DB_PATH'),
+          ENV.fetch('DBIP_MMDB_PATH'),
           "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
         ),
         gz.read
@@ -36,7 +36,7 @@ namespace :db_ip do
     )
 
     asn_lite_path = File.join(
-      ENV.fetch('DBIP_ASN_DB_PATH'),
+      ENV.fetch('DBIP_MMDB_PATH'),
       "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb.gz"
     )
     FileUtils.mv(
@@ -47,7 +47,7 @@ namespace :db_ip do
     Zlib::GzipReader.open(asn_lite_path) do |gz|
       IO.binwrite(
         File.join(
-          ENV.fetch('DBIP_ASN_DB_PATH'),
+          ENV.fetch('DBIP_MMDB_PATH'),
           "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
         ),
         gz.read
