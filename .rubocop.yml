@@ -9,7 +9,6 @@ AllCops:
     - config.ru
     - config/**/*
     - db/**/*
-    - lib/tasks/*
     - node_modules/**/*
     - Rakefile
     - spec/i18n_spec.rb
