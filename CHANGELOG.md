@@ -1,3 +1,17 @@
+# [0.5.0](https://github.com/checkip/checkip/compare/v0.4.0...v0.5.0) (2021-07-19)
+
+
+### Features
+
+* **core:** single env for mmdb files path ([55ccf40](https://github.com/checkip/checkip/commit/55ccf402e06170a58f69ded2a88f932f0e445da2))
+* **core:** work in limited mode without db ip files ([8cc75de](https://github.com/checkip/checkip/commit/8cc75de6693f28bb5a22f8f199ece872fbd2046d))
+* **infrastructure:** env based puma configuration ([ec981cc](https://github.com/checkip/checkip/commit/ec981cc654ccbea87b01de80d610118f5775e564))
+* **infrastructure:** integrate capistrano deploy ([6be7631](https://github.com/checkip/checkip/commit/6be763109d0832c1c8c9767630b4af3d209da4eb))
+* **infrastructure:** rake task to fetch ip databases ([72d4f92](https://github.com/checkip/checkip/commit/72d4f92bafc18ab3ebe55993d11eb14bc5413ec1))
+* **infrastructure:** restore original ip from cloudflare ([1d20c43](https://github.com/checkip/checkip/commit/1d20c430a00e039708588a56610fcfb1967069d5))
+
+
+
 # [0.4.0](https://github.com/checkip/checkip/compare/v0.3.0...v0.4.0) (2021-07-18)
 
 
