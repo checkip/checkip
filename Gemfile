@@ -7,6 +7,7 @@ ruby '3.0.2'
 gem 'rails', '~> 6.1.0'
 
 # System
+gem 'actionpack-cloudflare', '~> 1.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'down', '~> 5.2', require: false
 gem 'jbuilder', '>= 2.7'
