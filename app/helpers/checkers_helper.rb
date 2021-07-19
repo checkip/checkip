@@ -2,13 +2,22 @@ module CheckersHelper
   def checker_json(checker)
     checker_hash = {
       ip: checker.ip,
-      hostname: checker.hostname,
-      city: checker.geolocation.city.name,
-      region: checker.geolocation.subdivisions.most_specific.name,
-      country: checker.geolocation.country.iso_code,
-      loc: format_loc(checker.geolocation.location),
-      asn: format_asn(checker.asn)
+      hostname: checker.hostname
     }
+
+    unless checker.geolocation.nil?
+      checker_hash.merge!(
+        {
+          city: checker.geolocation.city.name,
+          region: checker.geolocation.subdivisions.most_specific.name,
+          country: checker.geolocation.country.iso_code,
+          loc: format_loc(checker.geolocation.location)
+        }
+      )
+    end
+
+    checker_hash[:asn] = format_asn(checker.asn) unless checker.asn.nil?
+
     JSON.pretty_generate(checker_hash.compact)
   end
 
