@@ -17,6 +17,10 @@ gem 'rouge', '~> 3.26'
 gem 'webpacker', '~> 5.2'
 
 group :development do
+  gem 'capistrano', '3.16.0'
+  gem 'capistrano-maintenance', '1.2.1', require: false
+  gem 'capistrano-rails', '1.6.1', require: false
+  gem 'capistrano-rvm', '0.1.2', require: false
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rack-mini-profiler'
