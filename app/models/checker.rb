@@ -23,6 +23,22 @@ class Checker
     fetch_asn_data(ip)
   end
 
+  def self.geo_db_connected?
+    geo_db_file = File.join(
+      ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+    )
+
+    File.exist?(geo_db_file)
+  end
+
+  def self.asn_db_connected?
+    asn_db_file = File.join(
+      ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+    )
+
+    File.exist?(asn_db_file)
+  end
+
   private
 
     def fetch_hostname(ip)
