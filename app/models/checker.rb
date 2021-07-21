@@ -3,6 +3,13 @@ class Checker
 
   include ActiveModel::Model
 
+  GEO_DB_FILE = File.join(
+    ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+  )
+  ASN_DB_FILE = File.join(
+    ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
+  )
+
   def initialize(ip:)
     @ip = ip
     @hostname = fetch_hostname(ip)
@@ -24,19 +31,11 @@ class Checker
   end
 
   def self.geo_db_connected?
-    geo_db_file = File.join(
-      ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-    )
-
-    File.exist?(geo_db_file)
+    File.exist?(GEO_DB_FILE)
   end
 
   def self.asn_db_connected?
-    asn_db_file = File.join(
-      ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-    )
-
-    File.exist?(asn_db_file)
+    File.exist?(ASN_DB_FILE)
   end
 
   private
@@ -48,24 +47,14 @@ class Checker
     end
 
     def fetch_geo_data(ip)
-      geo_db_file = File.join(
-        ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-      )
+      return unless Checker.geo_db_connected?
 
-      return unless File.exist?(geo_db_file)
-
-      geo_db ||= MaxMindDB.new(geo_db_file)
-      geo_db.lookup(ip)
+      MaxMindDB.new(GEO_DB_FILE).lookup(ip)
     end
 
     def fetch_asn_data(ip)
-      asn_db_file = File.join(
-        ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-      )
+      return unless Checker.asn_db_connected?
 
-      return unless File.exist?(asn_db_file)
-
-      asn_db ||= MaxMindDB.new(asn_db_file)
-      asn_db.lookup(ip)
+      MaxMindDB.new(ASN_DB_FILE).lookup(ip)
     end
 end
