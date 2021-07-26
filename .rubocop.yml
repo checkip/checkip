@@ -39,3 +39,6 @@ Style/EmptyMethod:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/MixinGrouping:
+  EnforcedStyle: grouped
