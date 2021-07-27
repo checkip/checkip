@@ -1,3 +1,14 @@
+# [0.6.0](https://github.com/checkip/checkip/compare/v0.5.0...v0.6.0) (2021-07-27)
+
+
+### Features
+
+* **core:** checker object set as hash ([fc7025e](https://github.com/checkip/checkip/commit/fc7025ec16e7f1794472ccfec5b8cfebc4bac9da))
+* **core:** cli detection ([7ddbe0a](https://github.com/checkip/checkip/commit/7ddbe0a907ca0b9a89d4f5a5c0907748a3302b26))
+* **core:** health check ([213f487](https://github.com/checkip/checkip/commit/213f4871188c6bf1f6327bea1db66cfbc36f84fb))
+
+
+
 # [0.5.0](https://github.com/checkip/checkip/compare/v0.4.0...v0.5.0) (2021-07-19)
 
 
