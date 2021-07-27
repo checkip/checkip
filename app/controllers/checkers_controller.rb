@@ -6,7 +6,7 @@ class CheckersController < ApplicationController
 
     respond_to do |format|
       format.html do
-        render layout: false, plain: "#{@checker.ip}\n"
+        render layout: false, plain: "#{@checker[:ip]}\n"
       end
     end
   end
