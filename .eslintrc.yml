@@ -11,15 +11,6 @@ globals:
 
 parser: "@babel/eslint-parser"
 
-settings:
-  import/resolver:
-    webpack:
-      config:
-        resolve:
-          modules:
-            - frontend
-            - node_modules
-
 rules:
   curly:
     - error
