@@ -60,14 +60,6 @@ RSpec.configure do |config|
   # Include Factory Bot syntax
   config.include FactoryBot::Syntax::Methods
 
-  # Include Shoulda Matchers
-  Shoulda::Matchers.configure do |c|
-    c.integrate do |with|
-      with.test_framework :rspec
-      with.library :rails
-    end
-  end
-
   config.before(:suite) do
     FileUtils.mkdir_p('tmp/fixtures')
     FileUtils.cp(
