@@ -3,11 +3,11 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # Whitelist ngrok
-  config.hosts << /[a-z0-9]+(|.[a-z]{2})+\.ngrok\.io/
+  # Allow requests to all hosts
+  config.hosts.clear
 
-  # Web Console whitelist for whole private network
-  config.web_console.allowed_ips = '192.168.0.0/16'
+  # Allow web_console for the whole private network
+  config.web_console.permissions = '192.168.0.0/16'
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
