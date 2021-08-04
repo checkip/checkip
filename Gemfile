@@ -18,10 +18,12 @@ gem 'meta-rails', '~> 2.0'
 gem 'rouge', '~> 3.26'
 
 group :development do
+  gem 'bcrypt_pbkdf'
   gem 'capistrano', '3.16.0'
   gem 'capistrano-maintenance', '1.2.1', require: false
   gem 'capistrano-rails', '1.6.1', require: false
   gem 'capistrano-rvm', '0.1.2', require: false
+  gem 'ed25519'
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rack-mini-profiler'

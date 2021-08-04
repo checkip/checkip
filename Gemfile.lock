@@ -27,6 +27,7 @@ GEM
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.7.6)
       msgpack (~> 1.0)
@@ -58,6 +59,7 @@ GEM
       railties (>= 3.2)
     down (5.2.2)
       addressable (~> 2.5)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -209,6 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   activemodel (~> 6.1.0)
+  bcrypt_pbkdf
   bootsnap (>= 1.4.4)
   byebug
   capistrano (= 3.16.0)
@@ -217,6 +220,7 @@ DEPENDENCIES
   capistrano-rvm (= 0.1.2)
   dotenv-rails
   down (~> 5.2)
+  ed25519
   factory_bot_rails
   faker
   fuubar
