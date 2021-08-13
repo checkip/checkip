@@ -2,20 +2,20 @@
   <header class="mdc-top-app-bar ckp-header-fixed">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <span class="mdc-top-app-bar__title"><%= t('pages.application.core.brand') %></span>
+        <span class="mdc-top-app-bar__title"><%= link_to t('pages.application.core.brand'), root_path %></span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
         <div class="mdc-touch-target-wrapper">
-          <button class="mdc-icon-button mdc-icon-button--touch" aria-label="Help" id="help-link">
+          <button class="mdc-icon-button mdc-icon-button--touch" aria-label="API" id="api-link">
             <div class="mdc-icon-button__ripple"></div>
-            <i class="fas fa-question-circle"></i>
+            <i class="fas fa-code fa-xs"></i>
             <div class="mdc-icon-button__touch"></div>
           </button>
         </div>
         <div class="mdc-touch-target-wrapper">
           <button class="mdc-icon-button mdc-icon-button--touch" aria-label="GitHub" id="github-link">
             <div class="mdc-icon-button__ripple"></div>
-            <i class="fab fa-github"></i>
+            <i class="fab fa-github fa-xs"></i>
             <div class="mdc-icon-button__touch"></div>
           </button>
         </div>

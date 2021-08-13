@@ -14,6 +14,13 @@ if (document.querySelector('.mdc-icon-button')) {
   });
 }
 
+if (document.querySelector('#api-link')) {
+  const ghLink = document.getElementById('api-link');
+  ghLink.addEventListener('click', () => {
+    window.location.assign('/api');
+  });
+}
+
 if (document.querySelector('#github-link')) {
   const ghLink = document.getElementById('github-link');
   ghLink.addEventListener('click', () => {
