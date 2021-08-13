@@ -1,0 +1,25 @@
+<div class="mdc-layout-grid mdc-typography">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <h1><%= t('pages.documentation.api.title') %></h1>
+      <p><%= t('pages.documentation.api.meta_description') %></p>
+
+      <h2><%= t('pages.documentation.api.authentication') %></h2>
+      <p><%= t('pages.documentation.api.authentication_text') %></p>
+
+      <h2><%= t('pages.documentation.api.https_connection') %></h2>
+      <p><%= t('pages.documentation.api.https_connection_text') %></p>
+      <div class="ckp-snippet-api ckp-highlight mdc-elevation--z1"><pre><%= raw rougify(snippet_api_https, 'bash') %></pre></div>
+
+      <h2><%= t('pages.documentation.api.json_response') %></h2>
+      <div class="ckp-snippet-api ckp-highlight mdc-elevation--z1"><pre><%= raw rougify(snippet_api_json(@checker), 'bash') %></pre></div>
+
+      <h2><%= t('pages.documentation.api.filtering') %></h2>
+      <div class="ckp-snippet-api ckp-highlight mdc-elevation--z1"><pre><%= raw rougify(snippet_api_filter(@checker), 'bash') %></pre></div>
+
+      <h2><%= t('pages.documentation.api.rate_limits') %></h2>
+      <p><%= t('pages.documentation.api.rate_limits_text') %></p>
+    </div>
+  </div>
+</div>
+

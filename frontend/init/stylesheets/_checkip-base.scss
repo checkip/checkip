@@ -16,6 +16,9 @@ $top-app-bar-ink-color: $core-on-primary;
 // Icons
 $heart-icon-color: #bf616a;
 
+// Snippets
+$snippet-background-color: darken($core-primary-color, 5%);
+
 // Fonts
 $body-font: string.unquote(
   'Roboto,-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif'

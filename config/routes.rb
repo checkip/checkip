@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/health' => 'monitors#show', defaults: { format: 'json' }
 
+  get '/api' => 'documentations#api'
+
   get '/ip'       => 'api/checkers#ip'
   get '/hostname' => 'api/checkers#hostname'
   get '/city'     => 'api/checkers#city'

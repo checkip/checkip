@@ -9,3 +9,15 @@ en:
         ip_geolocation_source: https://db-ip.com
         made_with_html: Made with %{heart} and %{checkip}
         meta_description: Tool to find geolocation and other information about any IP v4 and v6 address.
+    documentation:
+      api:
+        authentication: Authentication
+        authentication_text: We provide complete anonymous access to our API and don't require authentication.
+        filtering: Filtering
+        https_connection: HTTPS connection
+        https_connection_text: Our API is available only over a secure HTTPS connection with TLS v1.2 minimum. Connections over insecure HTTP protocol are automatically redirected to HTTPS.
+        json_response: JSON response
+        meta_description: CheckIP provides programmatical access to the API, including complete JSON response and individual filtered queries.
+        rate_limits: Rate limits
+        rate_limits_text: We don't enforce any rate limits at this time.
+        title: API
