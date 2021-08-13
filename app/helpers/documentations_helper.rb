@@ -15,7 +15,7 @@ module DocumentationsHelper
 
   def snippet_api_json(data)
     response = ''
-    response << "# Get complete JSON reponse\n"
+    response << "# Get a complete JSON response\n"
     response << "curl -L #{request.host_with_port}/json\n"
     response << JSON.pretty_generate(data)
 
@@ -25,7 +25,7 @@ module DocumentationsHelper
   def snippet_api_filter(data)
     response = ''
     data.each do |key, value|
-      response << "# Get #{key} value\n"
+      response << "# Get #{key}\n"
       response << "curl -L #{request.host_with_port}/#{key}\n"
       response << if key == :asn
                     "=> #{data[:asn][:asn]} #{data[:asn][:name]}"
