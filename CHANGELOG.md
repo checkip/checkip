@@ -1,3 +1,14 @@
+# [0.7.0](https://github.com/checkip/checkip/compare/v0.6.0...v0.7.0) (2021-08-13)
+
+
+### Features
+
+* **api:** api docs and examples ([b18164b](https://github.com/checkip/checkip/commit/b18164b645c936d4cd7e57c0da4dbd8cfab909ea))
+* **api:** initial api ([b1da65f](https://github.com/checkip/checkip/commit/b1da65f1ac95ac4034b2a01723ed7a6136045e02))
+* **ux:** upgrade to material-components-web v12.0.0 ([6cfd04f](https://github.com/checkip/checkip/commit/6cfd04f1637e7b28b92b6b03dfadb5e9722a2cd8))
+
+
+
 # [0.6.0](https://github.com/checkip/checkip/compare/v0.5.0...v0.6.0) (2021-07-27)
 
 
