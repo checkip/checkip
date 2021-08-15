@@ -4,6 +4,7 @@
 @use "@material/elevation/mdc-elevation";
 
 .ckp-json-output {
+  background-color: checkip-base.$snippet-background-color;
   border-radius: 4px;
   box-sizing: border-box;
   display: inline-flex;
