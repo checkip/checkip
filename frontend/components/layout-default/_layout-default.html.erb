@@ -1,3 +1,9 @@
+<div id="tooltip-api" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+  <div class="mdc-tooltip__surface mdc-tooltip__surface-animation"><%= t('pages.application.core.tooltip_api') %></div>
+</div>
+<div id="tooltip-github" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+  <div class="mdc-tooltip__surface mdc-tooltip__surface-animation"><%= t('pages.application.core.tooltip_github') %></div>
+</div>
 <div class="mdc-typography">
   <header class="mdc-top-app-bar ckp-header-fixed">
     <div class="mdc-top-app-bar__row">
@@ -6,14 +12,14 @@
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
         <div class="mdc-touch-target-wrapper">
-          <button class="mdc-icon-button mdc-icon-button--touch" aria-label="API" id="api-link">
+          <button class="mdc-icon-button mdc-icon-button--touch" data-tooltip-id="tooltip-api" aria-label="<%= t('pages.application.core.tooltip_api') %>" id="api-link">
             <div class="mdc-icon-button__ripple"></div>
             <i class="fas fa-code fa-xs"></i>
             <div class="mdc-icon-button__touch"></div>
           </button>
         </div>
         <div class="mdc-touch-target-wrapper">
-          <button class="mdc-icon-button mdc-icon-button--touch" aria-label="GitHub" id="github-link">
+          <button class="mdc-icon-button mdc-icon-button--touch" data-tooltip-id="tooltip-github" aria-label="<%= t('pages.application.core.tooltip_github') %>" id="github-link">
             <div class="mdc-icon-button__ripple"></div>
             <i class="fab fa-github fa-xs"></i>
             <div class="mdc-icon-button__touch"></div>

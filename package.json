@@ -35,6 +35,7 @@
     "@material/icon-button": "^12.0.0",
     "@material/layout-grid": "^12.0.0",
     "@material/top-app-bar": "^12.0.0",
+    "@material/tooltip": "^12.0.0",
     "@material/typography": "^12.0.0",
     "@rails/ujs": "6.1.4",
     "@rails/webpacker": "5.4.0",

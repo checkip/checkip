@@ -1205,6 +1205,22 @@
     "@material/feature-targeting" "^12.0.0"
     tslib "^2.1.0"
 
+"@material/tooltip@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@material/tooltip/-/tooltip-12.0.0.tgz#d74383b42cc6eb489bfe4b09ba1062a19e8e2f1f"
+  integrity sha512-YpXlidnWbymm5WdbteU4dSb+hdRMCrgsn1gO6xZ2HXfyiKX+2oqWvMZoSHMnCEc7oUvQteKybKrtD94T7CUeoA==
+  dependencies:
+    "@material/animation" "^12.0.0"
+    "@material/base" "^12.0.0"
+    "@material/dom" "^12.0.0"
+    "@material/elevation" "^12.0.0"
+    "@material/feature-targeting" "^12.0.0"
+    "@material/rtl" "^12.0.0"
+    "@material/shape" "^12.0.0"
+    "@material/theme" "^12.0.0"
+    "@material/typography" "^12.0.0"
+    tslib "^2.1.0"
+
 "@material/top-app-bar@^12.0.0":
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/@material/top-app-bar/-/top-app-bar-12.0.0.tgz#37e8a3107fb681dcee39c79f26f836d8cfc4a1fa"

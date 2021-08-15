@@ -1,5 +1,6 @@
 import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCRipple } from '@material/ripple';
+import { MDCTooltip } from '@material/tooltip';
 
 if (document.querySelector('.mdc-top-app-bar')) {
   const topAppBarElement = document.querySelector('.mdc-top-app-bar');
@@ -27,3 +28,8 @@ if (document.querySelector('#github-link')) {
     window.location.assign('https://github.com/checkip/checkip');
   });
 }
+
+const tooltipEls = Array.from(document.querySelectorAll('.mdc-tooltip'));
+tooltipEls.forEach((el) => {
+  MDCTooltip.attachTo(el);
+});

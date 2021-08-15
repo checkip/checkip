@@ -9,6 +9,8 @@ en:
         ip_geolocation_source: https://db-ip.com
         made_with_html: Made with %{heart} and %{checkip}
         meta_description: Tool to find geolocation and other information about any IP v4 and v6 address.
+        tooltip_api: API documentation
+        tooltip_github: GitHub repository
     documentation:
       api:
         authentication: Authentication
