@@ -1,23 +1,2 @@
-@use "./init/stylesheets/checkip-base";
-
 @use "@material/layout-grid/mdc-layout-grid";
 @use "@material/elevation/mdc-elevation";
-
-.ckp-json-output {
-  background-color: checkip-base.$snippet-background-color;
-  border-radius: 4px;
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: column;
-  padding: 16px;
-  position: relative;
-  width: 100%;
-
-  pre {
-    font-family: checkip-base.$mono-font;
-    font-size: 1.2em;
-    line-height: 1.4em;
-    margin: 0;
-    white-space: pre-wrap;
-  }
-}
