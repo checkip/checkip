@@ -49,12 +49,12 @@ class Checker
     def fetch_geo_data(ip)
       return unless Checker.geo_db_connected?
 
-      MaxMindDB.new(GEO_DB_FILE).lookup(ip)
+      MaxMindDB.new(GEO_DB_FILE, MaxMindDB::LOW_MEMORY_FILE_READER).lookup(ip)
     end
 
     def fetch_asn_data(ip)
       return unless Checker.asn_db_connected?
 
-      MaxMindDB.new(ASN_DB_FILE).lookup(ip)
+      MaxMindDB.new(ASN_DB_FILE, MaxMindDB::LOW_MEMORY_FILE_READER).lookup(ip)
     end
 end
