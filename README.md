@@ -10,4 +10,4 @@ Ruby 3.0+, Yarn v1 (classic).
 
 ## License
 
-Copyright 2020 - 2021 Dmitriy Tarasov. Released under the [BSD-3-Clause](LICENSE.txt) license.
+Copyright 2020 - 2021 Dmitriy Tarasov. Released under the [BSD-3-Clause](LICENSE) license.
