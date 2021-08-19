@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'pages GET #home', type: :request do
+RSpec.describe 'checkers GET #new', type: :request do
   let(:user_ip) { '1.1.1.1' }
   let(:ua_curl) { 'curl/7.76.1' }
   let(:ua_wget) { 'Wget/1.21.1' }
