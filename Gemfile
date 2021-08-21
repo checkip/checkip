@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '2.7.3'
 
 # Core
 gem 'activemodel', '~> 6.1.0'
