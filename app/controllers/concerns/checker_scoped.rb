@@ -12,23 +12,26 @@ module CheckerScoped
 
       checker = Checker.new(ip: request.remote_ip)
 
+      geo_data = checker.geolocation
+      asn_data = checker.asn
+
       checker_hash = {
         ip: checker.ip,
         hostname: checker.hostname
       }
 
-      unless checker.geolocation.nil?
+      unless geo_data.nil?
         checker_hash.merge!(
           {
-            city: checker.geolocation.city.name,
-            region: checker.geolocation.subdivisions.most_specific.name,
-            country: checker.geolocation.country.iso_code,
-            loc: format_loc(checker.geolocation.location)
+            city: geo_data.city.name,
+            region: geo_data.subdivisions.most_specific.name,
+            country: geo_data.country.iso_code,
+            loc: format_loc(geo_data.location)
           }
         )
       end
 
-      checker_hash[:asn] = format_asn(checker.asn) unless checker.asn.nil?
+      checker_hash[:asn] = format_asn(asn_data) unless asn_data.nil?
 
       @checker = checker_hash.compact
     end
@@ -46,6 +49,6 @@ module CheckerScoped
         asn: "AS#{asn['autonomous_system_number']}",
         name: asn['autonomous_system_organization'],
         route: asn['network']
-      }.compact
+      }
     end
 end
