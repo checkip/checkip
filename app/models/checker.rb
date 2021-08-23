@@ -5,10 +5,13 @@ class Checker
 
   GEO_DB_FILE = File.join(
     ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-  )
+  ).freeze
   ASN_DB_FILE = File.join(
     ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-  )
+  ).freeze
+
+  GEO_DB = MaxMindDB.new(GEO_DB_FILE).freeze if File.exist?(GEO_DB_FILE)
+  ASN_DB = MaxMindDB.new(ASN_DB_FILE).freeze if File.exist?(ASN_DB_FILE)
 
   def initialize(ip:)
     @ip = ip
@@ -22,20 +25,16 @@ class Checker
 
   # Geolocation
   def geolocation
-    fetch_geo_data(ip)
+    return unless defined?(GEO_DB)
+
+    GEO_DB.lookup(ip)
   end
 
   # Autonomous System Number
   def asn
-    fetch_asn_data(ip)
-  end
+    return unless defined?(ASN_DB)
 
-  def self.geo_db_connected?
-    File.exist?(GEO_DB_FILE)
-  end
-
-  def self.asn_db_connected?
-    File.exist?(ASN_DB_FILE)
+    ASN_DB.lookup(ip)
   end
 
   private
@@ -44,17 +43,5 @@ class Checker
       Resolv.new.getname(ip)
     rescue Resolv::ResolvError
       nil
-    end
-
-    def fetch_geo_data(ip)
-      return unless Checker.geo_db_connected?
-
-      MaxMindDB.new(GEO_DB_FILE, MaxMindDB::LOW_MEMORY_FILE_READER).lookup(ip)
-    end
-
-    def fetch_asn_data(ip)
-      return unless Checker.asn_db_connected?
-
-      MaxMindDB.new(ASN_DB_FILE, MaxMindDB::LOW_MEMORY_FILE_READER).lookup(ip)
     end
 end
