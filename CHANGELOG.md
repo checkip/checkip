@@ -1,3 +1,20 @@
+# [0.8.0](https://github.com/checkip/checkip/compare/v0.7.0...v0.8.0) (2021-08-23)
+
+
+### Features
+
+* **ux:** tooltips for icon buttons ([c21e5b0](https://github.com/checkip/checkip/commit/c21e5b09fd1f4b57c07c606ec3ecb1d70577a0f2))
+* **ux:** update checker data background ([73de3d2](https://github.com/checkip/checkip/commit/73de3d2228be0ed1d048e6ff238cf5e195cbe602))
+* **ux:** update doc-api page style ([bc5a4ee](https://github.com/checkip/checkip/commit/bc5a4ee7e376ee23cc50d1cec5515cddd32dbfb3))
+* **ux:** update top app bar ([8410e40](https://github.com/checkip/checkip/commit/8410e40f938270b4dfa56e9f177dbb96a24db896))
+
+
+### Performance Improvements
+
+* **core:** create maxminddb object only once ([deddc70](https://github.com/checkip/checkip/commit/deddc70080bf0ffeab0f3012213d5ea71f0dff82))
+
+
+
 # [0.7.0](https://github.com/checkip/checkip/compare/v0.6.0...v0.7.0) (2021-08-13)
 
 
