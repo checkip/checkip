@@ -5,10 +5,10 @@ class MonitorsController < ApplicationController
         render json: {
           status: 'OK',
           geo_database: {
-            connected: Checker.geo_db_connected?
+            connected: defined?(Checker::GEO_DB) ? true : false
           },
           asn_database: {
-            connected: Checker.asn_db_connected?
+            connected: defined?(Checker::ASN_DB) ? true : false
           }
         }
       end
