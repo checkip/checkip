@@ -23,32 +23,35 @@ module CheckerScoped
       unless geo_data.nil?
         checker_hash.merge!(
           {
-            city: geo_data.city.name,
-            region: geo_data.subdivisions.most_specific.name,
-            country: geo_data.country.iso_code,
-            loc: format_loc(geo_data.location)
+            city: geo_data['city']['names']['en'],
+            region: geo_data['subdivisions'][0]['names']['en'],
+            country: geo_data['country']['iso_code'],
+            loc: format_loc(geo_data['location'])
           }
         )
       end
 
-      checker_hash[:asn] = format_asn(asn_data) unless asn_data.nil?
+      checker_hash[:asn] = format_asn(asn_data, checker.ip) unless asn_data.nil?
 
       @checker = checker_hash.compact
     end
 
     def format_loc(location)
-      return unless location.latitude && location.longitude
-
-      "#{location.latitude},#{location.longitude}"
+      "#{location['latitude']},#{location['longitude']}"
     end
 
-    def format_asn(asn)
-      return unless asn['autonomous_system_number']
+    def format_asn(asn, ip)
+      return unless asn[0]
 
       {
-        asn: "AS#{asn['autonomous_system_number']}",
-        name: asn['autonomous_system_organization'],
-        route: asn['network']
-      }
+        asn: "AS#{asn[0]['autonomous_system_number']}",
+        name: asn[0]['autonomous_system_organization'],
+        route: construct_route(ip, asn[1])
+      }.compact
+    end
+
+    def construct_route(ip, prefix)
+      addr = "#{ip}/#{prefix}"
+      "#{IPAddr.new(addr)}/#{prefix}"
     end
 end

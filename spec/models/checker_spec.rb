@@ -45,41 +45,37 @@ RSpec.describe Checker, type: :model do
 
   describe 'geolocation' do
     it 'includes city data' do
-      expect(ipv4_london.geolocation.city.name).to eq 'London'
+      expect(ipv4_london.geolocation['city']['names']['en']).to eq 'London'
     end
 
     it 'includes region data' do
-      expect(ipv4_london.geolocation.subdivisions.most_specific.name).to eq 'England'
+      expect(ipv4_london.geolocation['subdivisions'][0]['names']['en']).to eq 'England'
     end
 
     it 'includes country data' do
-      expect(ipv4_london.geolocation.country.name).to eq 'United Kingdom'
+      expect(ipv4_london.geolocation['country']['names']['en']).to eq 'United Kingdom'
     end
 
     it 'includes country code data' do
-      expect(ipv4_london.geolocation.country.iso_code).to eq 'GB'
+      expect(ipv4_london.geolocation['country']['iso_code']).to eq 'GB'
     end
 
     it 'includes continent data' do
-      expect(ipv4_london.geolocation.continent.name).to eq 'Europe'
+      expect(ipv4_london.geolocation['continent']['names']['en']).to eq 'Europe'
     end
 
     it 'includes continent code data' do
-      expect(ipv4_london.geolocation.continent.code).to eq 'EU'
+      expect(ipv4_london.geolocation['continent']['code']).to eq 'EU'
     end
   end
 
   describe 'asn' do
     it 'includes autonomous system number' do
-      expect(ipv4_dtag.asn['autonomous_system_number']).to eq 3320
+      expect(ipv4_dtag.asn[0]['autonomous_system_number']).to eq 3320
     end
 
     it 'includes autonomous system organization' do
-      expect(ipv4_dtag.asn['autonomous_system_organization']).to eq 'Deutsche Telekom AG'
-    end
-
-    it 'includes autonomous system route' do
-      expect(ipv4_dtag.asn['network']).to eq '31.224.0.0/11'
+      expect(ipv4_dtag.asn[0]['autonomous_system_organization']).to eq 'Deutsche Telekom AG'
     end
   end
 end

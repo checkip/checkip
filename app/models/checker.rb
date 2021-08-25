@@ -10,8 +10,19 @@ class Checker
     ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
   ).freeze
 
-  GEO_DB = MaxMindDB.new(GEO_DB_FILE).freeze if File.exist?(GEO_DB_FILE)
-  ASN_DB = MaxMindDB.new(ASN_DB_FILE).freeze if File.exist?(ASN_DB_FILE)
+  if File.exist?(GEO_DB_FILE)
+    GEO_DB = MaxMind::DB.new(
+      GEO_DB_FILE,
+      mode: MaxMind::DB::MODE_MEMORY
+    ).freeze
+  end
+
+  if File.exist?(ASN_DB_FILE)
+    ASN_DB = MaxMind::DB.new(
+      ASN_DB_FILE,
+      mode: MaxMind::DB::MODE_MEMORY
+    ).freeze
+  end
 
   def initialize(ip:)
     @ip = ip
@@ -27,14 +38,14 @@ class Checker
   def geolocation
     return unless defined?(GEO_DB)
 
-    GEO_DB.lookup(ip)
+    GEO_DB.get(ip)
   end
 
   # Autonomous System Number
   def asn
     return unless defined?(ASN_DB)
 
-    ASN_DB.lookup(ip)
+    ASN_DB.get_with_prefix_length(ip)
   end
 
   private

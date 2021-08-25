@@ -13,7 +13,7 @@ gem 'webpacker', '~> 5.2'
 
 # Other
 gem 'down', '~> 5.2', require: false
-gem 'maxminddb', '~> 0.1'
+gem 'maxmind-db', '~> 1.1'
 gem 'meta-rails', '~> 2.0'
 gem 'rouge', '~> 3.26'
 

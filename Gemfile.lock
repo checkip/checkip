@@ -87,7 +87,7 @@ GEM
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    maxminddb (0.1.22)
+    maxmind-db (1.1.1)
     meta-rails (2.0.0)
       railties (>= 6.0)
     method_source (1.0.0)
@@ -225,7 +225,7 @@ DEPENDENCIES
   faker
   fuubar
   i18n-tasks
-  maxminddb (~> 0.1)
+  maxmind-db (~> 1.1)
   meta-rails (~> 2.0)
   pry-rails
   puma (~> 5.1)
