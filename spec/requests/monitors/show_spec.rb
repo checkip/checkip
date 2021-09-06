@@ -7,10 +7,12 @@ RSpec.describe 'monitors GET #show', type: :request do
       {
         status: 'OK',
         geo_database: {
-          connected: true
+          connected: true,
+          version: '2020-12-29'
         },
         asn_database: {
-          connected: true
+          connected: true,
+          version: '2020-12-29'
         }
       }
     )
