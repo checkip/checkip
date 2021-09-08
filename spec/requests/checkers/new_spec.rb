@@ -6,6 +6,7 @@ RSpec.describe 'checkers GET #new', type: :request do
   let(:ua_wget) { 'Wget/1.21.1' }
   let(:ua_httpie) { 'HTTPie/2.4.0' }
   let(:ua_httpie_go) { 'httpie-go/0.7.0' }
+  let(:ua_go_http_client) { 'Go-http-client/1.1' }
 
   it 'renders the :home template' do
     get root_path
@@ -29,6 +30,11 @@ RSpec.describe 'checkers GET #new', type: :request do
 
   it 'renders ip when httpie-go user-agent' do
     get root_path, headers: { HTTP_USER_AGENT: ua_httpie_go, REMOTE_ADDR: user_ip }
+    expect(response.body).to eq "1.1.1.1\n"
+  end
+
+  it 'renders ip when go-http-client user-agent' do
+    get root_path, headers: { HTTP_USER_AGENT: ua_go_http_client, REMOTE_ADDR: user_ip }
     expect(response.body).to eq "1.1.1.1\n"
   end
 end

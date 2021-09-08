@@ -48,3 +48,6 @@ Style/MixinGrouping:
 
 RSpec/ExampleLength:
   Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
