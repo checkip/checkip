@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/loc'      => 'api/checkers#loc'
   get '/asn'      => 'api/checkers#asn'
   get '/json'     => 'api/checkers#json'
-end
+  get '/ua'       => 'api/checkers#ua'
+ end

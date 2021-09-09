@@ -34,4 +34,8 @@ class Api::CheckersController < ApplicationController
   def json
     render json: "#{JSON.pretty_generate(@checker)}\n"
   end
+
+  def ua
+    render plain: "#{request.user_agent}\n"
+  end
 end
