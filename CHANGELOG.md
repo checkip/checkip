@@ -1,3 +1,26 @@
+# [0.9.0](https://github.com/checkip/checkip/compare/v0.8.0...v0.9.0) (2021-09-10)
+
+
+### Bug Fixes
+
+* **core:** replace removed methods in the health check ([12e6af7](https://github.com/checkip/checkip/commit/12e6af782981d28e5f9294cf5169757eb15c9afb))
+
+
+### Features
+
+* **api:** endpoint for user-agent ([b20b981](https://github.com/checkip/checkip/commit/b20b98104785e95acbe0083c15b8d25f1e1f4804))
+* **core:** detect go-http-client ([3231066](https://github.com/checkip/checkip/commit/3231066eb38eb19638b4900b8c3ac803134500aa))
+* **core:** new health check ([0019e34](https://github.com/checkip/checkip/commit/0019e34f8066d8cd2f5a59575442b283161e0872))
+* **core:** style json on health check ([4d0bfdd](https://github.com/checkip/checkip/commit/4d0bfddd5e9842526a0698eec5bfd460ed2494d4))
+* **core:** update mmdb reader ([6c90940](https://github.com/checkip/checkip/commit/6c90940de271c7206e83dd5265ea592ffa44d81e))
+
+
+### Performance Improvements
+
+* **core:** prevent multiple db lookups ([956573b](https://github.com/checkip/checkip/commit/956573b5ef4d53fdd817956d034f4b7837416477))
+
+
+
 # [0.8.0](https://github.com/checkip/checkip/compare/v0.7.0...v0.8.0) (2021-08-23)
 
 
