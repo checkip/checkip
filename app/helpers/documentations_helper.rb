@@ -28,7 +28,7 @@ module DocumentationsHelper
       response << "# Get #{key}\n"
       response << "curl -L #{request.host_with_port}/#{key}\n"
       response << if key == :asn
-                    "=> #{data[:asn][:asn]} #{data[:asn][:name]}"
+                    "#{JSON.pretty_generate(value)}\n\n"
                   else
                     "=> #{value}\n\n"
                   end

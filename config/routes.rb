@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/region'   => 'api/checkers#region'
   get '/country'  => 'api/checkers#country'
   get '/loc'      => 'api/checkers#loc'
-  get '/asn'      => 'api/checkers#asn'
+  get '/asn'      => 'api/checkers#asn', defaults: { format: 'json' }
   get '/json'     => 'api/checkers#json'
   get '/ua'       => 'api/checkers#ua'
  end

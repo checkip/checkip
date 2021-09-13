@@ -28,7 +28,7 @@ class Api::CheckersController < ApplicationController
   end
 
   def asn
-    render plain: "#{@checker[:asn][:asn]} #{@checker[:asn][:name]}\n"
+    render json: "#{JSON.pretty_generate(@checker[:asn])}\n"
   end
 
   def json
