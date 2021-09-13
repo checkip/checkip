@@ -5,6 +5,12 @@ RSpec.describe 'api/checkers GET #asn', type: :request do
 
   it 'renders asn' do
     get asn_path, headers: { REMOTE_ADDR: user_ip }
-    expect(response.body).to eq "AS3320 Deutsche Telekom AG\n"
+    expect(JSON.parse(response.body, symbolize_names: true)).to eq(
+      {
+        asn: 'AS3320',
+        name: 'Deutsche Telekom AG',
+        route: '31.224.0.0/11'
+      }
+    )
   end
 end
