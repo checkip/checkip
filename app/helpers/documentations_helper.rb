@@ -1,13 +1,13 @@
 module DocumentationsHelper
   def snippet_api_https
     response = ''
-    response << "# curl example to get your IP address over HTTPS\n"
+    response << "# #{t('pages.documentation.api.snippet_curl')}\n"
     response << "curl #{request.protocol + request.host_with_port}\n\n"
-    response << "# curl example using `-L` option\n"
+    response << "# #{t('pages.documentation.api.snippet_curl_l')}\n"
     response << "curl -L #{request.host_with_port}\n\n"
-    response << "# wget example\n"
+    response << "# #{t('pages.documentation.api.snippet_wget')}\n"
     response << "wget -qO- #{request.host_with_port}\n\n"
-    response << "# HTTPie example\n"
+    response << "# #{t('pages.documentation.api.snippet_httpie')}\n"
     response << "http -Fb #{request.host_with_port}"
 
     response
@@ -15,9 +15,9 @@ module DocumentationsHelper
 
   def snippet_api_json(data)
     response = ''
-    response << "# Ensure JSON response\n"
+    response << "# #{t('pages.documentation.api.snippet_json_response')}\n"
     response << "curl -L #{request.host_with_port}/json\n"
-    response << "# Or send 'Accept: application/json' header\n"
+    response << "# #{t('pages.documentation.api.snippet_json_header')}\n"
     response << "curl -LH 'Accept: application/json' #{request.host_with_port}\n"
     response << JSON.pretty_generate(data)
 
@@ -27,7 +27,7 @@ module DocumentationsHelper
   def snippet_api_filter(data)
     response = ''
     data.each do |key, value|
-      response << "# Get #{key}\n"
+      response << "# #{key}\n"
       response << "curl -L #{request.host_with_port}/#{key}\n"
       response << if key == :asn
                     "#{JSON.pretty_generate(value)}\n\n"

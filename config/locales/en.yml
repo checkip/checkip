@@ -22,4 +22,10 @@ en:
         meta_description: CheckIP provides programmatic access to the API, including complete JSON response and individual filtered queries.
         rate_limits: Rate limits
         rate_limits_text: At this time, there are no enforced rate limits.
+        snippet_curl: curl example to get your IP address over HTTPS
+        snippet_curl_l: curl example using `-L` option
+        snippet_httpie: HTTPie example
+        snippet_json_header: 'Or send ''Accept: application/json'' header'
+        snippet_json_response: Ensure JSON response
+        snippet_wget: wget example
         title: API
