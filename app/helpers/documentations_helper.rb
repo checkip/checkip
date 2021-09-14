@@ -15,8 +15,10 @@ module DocumentationsHelper
 
   def snippet_api_json(data)
     response = ''
-    response << "# Get a complete JSON response\n"
+    response << "# Ensure JSON response\n"
     response << "curl -L #{request.host_with_port}/json\n"
+    response << "# Or send 'Accept: application/json' header\n"
+    response << "curl -LH 'Accept: application/json' #{request.host_with_port}\n"
     response << JSON.pretty_generate(data)
 
     response
