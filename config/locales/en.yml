@@ -11,9 +11,9 @@ en:
         meta_description: Tool to find geolocation and other information about any IP v4 and v6 address.
         service_api_description: Comprehensive information about any IPv4 or IPv6 address with JSON API over HTTPS.
         service_api_header: Fast and secure
-        service_price_description: Free for personal and commercial use. An on-premise solution is also available free of charge.
+        service_price_description: Free of charge for personal and commercial use, including an on-premise solution.
         service_price_header: Free
-        service_privacy_description: Website and API access are entirely anonymous and not tracked by any 3-rd party services.
+        service_privacy_description: Website and API access are entirely anonymous and not tracked by any 3-rd parties.
         service_privacy_header: Privacy-oriented
         tooltip_api: API documentation
         tooltip_github: GitHub repository

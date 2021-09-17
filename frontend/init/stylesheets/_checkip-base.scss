@@ -16,8 +16,9 @@ $top-app-bar-ink-color: $core-on-primary;
 // Icons
 $heart-icon-color: #bf616a;
 
-// Snippets
+// Boxes
 $snippet-background-color: darken($core-primary-color, 5%);
+$text-box-background-color: darken($core-primary-color, 3%);
 
 // Fonts
 $body-font: string.unquote(

@@ -25,3 +25,11 @@ body {
     white-space: pre-wrap;
   }
 }
+
+.ckp-text-box {
+  background-color: checkip-base.$text-box-background-color;
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+}
