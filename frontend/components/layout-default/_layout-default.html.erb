@@ -30,7 +30,9 @@
   </header>
   <main class="ckp-layout-fixed">
     <%= yield %>
-    <div class="ckp-powered-by"><%= t('pages.application.core.made_with_html', heart: tag.span(tag.i(class: 'fas fa-heart'), class: 'ckp-heart-icon'), checkip: (link_to 'CheckIP', 'https://github.com/checkip/checkip')) %></div>
-    <div class="ckp-powered-by"><%= t('pages.application.core.ip_geolocation_by_html', db_source_url: link_to(t('pages.application.core.ip_geolocation_brand'), t('pages.application.core.ip_geolocation_source'))) %></div>
+    <div class="ckp-powered-by">
+      <div class="mdc-typography--body2"><%= t('pages.application.core.made_with_html', heart: tag.span(tag.i(class: 'fas fa-heart'), class: 'ckp-heart-icon'), checkip: (link_to 'CheckIP', 'https://github.com/checkip/checkip')) %></div>
+      <div class="mdc-typography--body2"><%= t('pages.application.core.ip_geolocation_by_html', db_source_url: link_to(t('pages.application.core.ip_geolocation_brand'), t('pages.application.core.ip_geolocation_source'))) %></div>
+    </div>
   </main>
 </div>
