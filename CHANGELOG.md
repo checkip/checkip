@@ -1,3 +1,19 @@
+# [0.10.0](https://github.com/checkip/checkip/compare/v0.9.0...v0.10.0) (2021-09-18)
+
+
+### Features
+
+* **api:** asn endpoint returns json ([918f220](https://github.com/checkip/checkip/commit/918f2203d6de58ba4a50a0ce1d3fe29de840e222))
+* **api:** handle json header on main page ([fd4b523](https://github.com/checkip/checkip/commit/fd4b5239cce9acdb2ee7651bd644c906bdf98bff))
+* **core:** detect faraday ([c019881](https://github.com/checkip/checkip/commit/c019881328861dd6d76dd063f48781e1d8debe31))
+* **ux:** add service description to main page ([13678ce](https://github.com/checkip/checkip/commit/13678ce633c130d6933e4286248d4f7d8c544431))
+* **ux:** style service description ([3e9b33a](https://github.com/checkip/checkip/commit/3e9b33a5182fda28d57632364e50e3e704e9087f))
+* **ux:** update footer ([c73b9ce](https://github.com/checkip/checkip/commit/c73b9ce8f4cd3cf3803956105f3c6239f347e709))
+* **ux:** update grid layout ([1fc648c](https://github.com/checkip/checkip/commit/1fc648c9cc2f63381839375b328bd9709d1f9069))
+* **ux:** update style for main page headers ([61aee93](https://github.com/checkip/checkip/commit/61aee9320f5f9fa4988ee6616e750fc3ddbf09e5))
+
+
+
 # [0.9.0](https://github.com/checkip/checkip/compare/v0.8.0...v0.9.0) (2021-09-10)
 
 
