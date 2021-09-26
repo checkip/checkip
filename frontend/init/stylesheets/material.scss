@@ -1,16 +1,15 @@
-@use "./checkip-base";
+@use './checkip-base';
 
-@use "@material/theme" with (
-  $primary: checkip-base.$core-primary-color,
-  $secondary: checkip-base.$core-secondary-color,
-  $surface: checkip-base.$core-surface,
-  $on-primary: checkip-base.$core-on-primary,
-  $on-surface: checkip-base.$core-on-surface,
-);
+@use '@material/theme' with
+  (
+    $primary: checkip-base.$core-primary-color,
+    $secondary: checkip-base.$core-secondary-color,
+    $surface: checkip-base.$core-surface,
+    $on-primary: checkip-base.$core-on-primary,
+    $on-surface: checkip-base.$core-on-surface
+  );
 
-@use "@material/typography" with (
-  $font-family: checkip-base.$body-font,
-);
+@use '@material/typography' with ($font-family: checkip-base.$body-font);
 
 body {
   background-color: checkip-base.$core-primary-color;
