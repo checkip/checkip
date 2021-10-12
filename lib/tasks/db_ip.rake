@@ -19,7 +19,7 @@ namespace :db_ip do
     )
 
     Zlib::GzipReader.open(city_lite_path) do |gz|
-      IO.binwrite(
+      File.binwrite(
         File.join(
           ENV.fetch('DBIP_MMDB_PATH'),
           "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
@@ -45,7 +45,7 @@ namespace :db_ip do
     )
 
     Zlib::GzipReader.open(asn_lite_path) do |gz|
-      IO.binwrite(
+      File.binwrite(
         File.join(
           ENV.fetch('DBIP_MMDB_PATH'),
           "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
