@@ -39,7 +39,8 @@
     "@material/typography": "^12.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
-    "resolve-url-loader": "^4.0.0"
+    "resolve-url-loader": "^4.0.0",
+    "sass": "1.42.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -53,6 +54,7 @@
     "lint-staged": "^11.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
+    "sass-loader": "^10.2.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-sass-guidelines": "^8.0.0",
