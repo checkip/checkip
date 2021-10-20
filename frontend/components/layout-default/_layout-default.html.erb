@@ -1,30 +1,42 @@
-<div id="tooltip-api" class="mdc-tooltip" role="tooltip" aria-hidden="true">
-  <div class="mdc-tooltip__surface mdc-tooltip__surface-animation"><%= t('pages.application.core.tooltip_api') %></div>
-</div>
-<div id="tooltip-github" class="mdc-tooltip" role="tooltip" aria-hidden="true">
-  <div class="mdc-tooltip__surface mdc-tooltip__surface-animation"><%= t('pages.application.core.tooltip_github') %></div>
-</div>
 <div class="mdc-typography">
-  <header class="mdc-top-app-bar ckp-header-fixed">
+  <aside class="mdc-drawer mdc-drawer--modal ckp-drawer">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-deprecated-list">
+        <%= link_to root_path, class: "mdc-deprecated-list-item #{'mdc-deprecated-list-item--activated' if current_page?(root_path)}", tabindex: ('0' if current_page?(root_path)) do %>
+          <span class="mdc-deprecated-list-item__ripple"></span>
+          <i class="fas fa-home fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
+          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.brand') %></span>
+        <% end %>
+        <%= link_to api_path, class: "mdc-deprecated-list-item #{'mdc-deprecated-list-item--activated' if current_page?(api_path)}", tabindex: ('0' if current_page?(api_path)) do %>
+          <span class="mdc-deprecated-list-item__ripple"></span>
+          <i class="fas fa-code fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
+          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_api') %></span>
+        <% end %>
+        <a class="mdc-deprecated-list-item" href="#">
+          <span class="mdc-deprecated-list-item__ripple"></span>
+          <i class="fas fa-user-shield fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
+          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_terms') %></span>
+        </a>
+        <%= link_to 'https://github.com/checkip/checkip', class: "mdc-deprecated-list-item" do %>
+          <span class="mdc-deprecated-list-item__ripple"></span>
+          <i class="fab fa-github fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
+          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_github') %></span>
+        <% end %>
+      </nav>
+    </div>
+  </aside>
+  <div class="mdc-drawer-scrim"></div>
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed ckp-header-fixed">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <div class="mdc-touch-target-wrapper">
+          <button class="mdc-top-app-bar__navigation-icon mdc-icon-button mdc-icon-button--touch">
+            <div class="mdc-icon-button__ripple"></div>
+            <i class="fas fa-bars fa-sm ckp-icon-button"></i>
+            <div class="mdc-icon-button__touch"></div>
+          </button>
+        </div>
         <span class="mdc-top-app-bar__title"><%= link_to t('pages.application.core.brand'), root_path %></span>
-      </section>
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-        <div class="mdc-touch-target-wrapper">
-          <button class="mdc-icon-button mdc-icon-button--touch" data-tooltip-id="tooltip-api" aria-label="<%= t('pages.application.core.tooltip_api') %>" id="api-link">
-            <div class="mdc-icon-button__ripple"></div>
-            <i class="fas fa-code fa-xs"></i>
-            <div class="mdc-icon-button__touch"></div>
-          </button>
-        </div>
-        <div class="mdc-touch-target-wrapper">
-          <button class="mdc-icon-button mdc-icon-button--touch" data-tooltip-id="tooltip-github" aria-label="<%= t('pages.application.core.tooltip_github') %>" id="github-link">
-            <div class="mdc-icon-button__ripple"></div>
-            <i class="fab fa-github fa-xs"></i>
-            <div class="mdc-icon-button__touch"></div>
-          </button>
-        </div>
       </section>
     </div>
   </header>

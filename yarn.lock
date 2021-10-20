@@ -1138,6 +1138,24 @@
     "@material/feature-targeting" "^13.0.0"
     tslib "^2.1.0"
 
+"@material/drawer@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-13.0.0.tgz#35bb370f44ac860ca38ce722144869edc86da9f9"
+  integrity sha512-TIV/K9MED3ymngmKrdLwOMhUF44BzoR6HuTVsZAM4bgy0sfSv+jzgaGUqJsvjEhTXk+Q9OTEge+TsU/ETzQCbg==
+  dependencies:
+    "@material/animation" "^13.0.0"
+    "@material/base" "^13.0.0"
+    "@material/dom" "^13.0.0"
+    "@material/elevation" "^13.0.0"
+    "@material/feature-targeting" "^13.0.0"
+    "@material/list" "^13.0.0"
+    "@material/ripple" "^13.0.0"
+    "@material/rtl" "^13.0.0"
+    "@material/shape" "^13.0.0"
+    "@material/theme" "^13.0.0"
+    "@material/typography" "^13.0.0"
+    tslib "^2.1.0"
+
 "@material/elevation@^13.0.0":
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-13.0.0.tgz#ae3eabc20e864240144fdf5c16b09a1e7a52852c"
@@ -1177,6 +1195,22 @@
   resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-13.0.0.tgz#8c7534b1c1b78978cd2beabee32a9e2e37dc9522"
   integrity sha512-9L1BVLRIyetm/AOC+59+yca6R0OO2AJKHiUMdZrxgUVjqVblqWXEMeONZqslFRGHBiSIaYdrDIhn4ZTYY6tKUA==
   dependencies:
+    tslib "^2.1.0"
+
+"@material/list@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@material/list/-/list-13.0.0.tgz#57a77aeff4d177da76f9d849f9e1db0d17027c9c"
+  integrity sha512-poq4WNDEfW6Z3YPAn3wdBX4RSkj3A83Pht6984MmG8YJZMlq34ftHECw37VcdmFJIyRPdpZqywJo/i7CxsSAgQ==
+  dependencies:
+    "@material/base" "^13.0.0"
+    "@material/density" "^13.0.0"
+    "@material/dom" "^13.0.0"
+    "@material/feature-targeting" "^13.0.0"
+    "@material/ripple" "^13.0.0"
+    "@material/rtl" "^13.0.0"
+    "@material/shape" "^13.0.0"
+    "@material/theme" "^13.0.0"
+    "@material/typography" "^13.0.0"
     tslib "^2.1.0"
 
 "@material/ripple@^13.0.0":

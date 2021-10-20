@@ -13,6 +13,11 @@ $max-width-xl: 800px;
 // Top App Bar
 $top-app-bar-ink-color: $core-on-primary;
 
+// Drawer
+$drawer-activated-icon-ink-color: $core-on-surface;
+$drawer-activated-text-ink-color: $core-on-surface;
+$drawer-activated-overlay-color: darken($core-primary-color, 10%);
+
 // Icons
 $heart-icon-color: #bf616a;
 

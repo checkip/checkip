@@ -1,14 +1,25 @@
 @use './init/stylesheets/checkip-base';
 
-@use '@material/icon-button/mdc-icon-button';
+@use '@material/drawer';
 @use '@material/icon-button';
-@use '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/icon-button/mdc-icon-button';
+@use '@material/list';
 @use '@material/top-app-bar';
+@use '@material/top-app-bar/mdc-top-app-bar';
 @use '@material/typography/mdc-typography';
-@use '@material/tooltip/styles';
+
+@include drawer.core-styles;
+@include drawer.modal-core-styles;
+@include list.deprecated-core-styles;
 
 .mdc-top-app-bar.ckp-top-app-bar {
   @include top-app-bar.ink-color(checkip-base.$top-app-bar-ink-color);
+}
+
+.mdc-drawer.ckp-drawer {
+  @include drawer.item-activated-icon-ink-color(checkip-base.$drawer-activated-icon-ink-color);
+  @include drawer.item-activated-text-ink-color(checkip-base.$drawer-activated-text-ink-color);
+  @include drawer.activated-overlay-color(checkip-base.$drawer-activated-overlay-color);
 }
 
 .ckp-header-fixed {

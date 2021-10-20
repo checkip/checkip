@@ -3,11 +3,15 @@ en:
   pages:
     application:
       core:
-        brand: CheckIP.info
+        brand: checkip.info
         ip_geolocation_brand: DB-IP
         ip_geolocation_by_html: IP Geolocation by %{db_source_url}
         ip_geolocation_source: https://db-ip.com
         made_with_html: Made with %{heart} and %{checkip}
+        menu_api: Documentation
+        menu_github: GitHub
+        menu_home: Home
+        menu_terms: Privacy and Terms
         meta_description: Tool to find geolocation and other information about any IP v4 and v6 address.
         service_api_description: Comprehensive information about any IPv4 or IPv6 address with JSON API over HTTPS.
         service_api_header: Fast and secure
@@ -15,8 +19,6 @@ en:
         service_price_header: Free
         service_privacy_description: Website and API access are entirely anonymous and not tracked by any 3-rd parties.
         service_privacy_header: Privacy-oriented
-        tooltip_api: API documentation
-        tooltip_github: GitHub repository
     documentation:
       api:
         authentication: Authentication
