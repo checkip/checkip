@@ -10,7 +10,6 @@ en:
         made_with_html: Made with %{heart} and %{checkip}
         menu_api: Documentation
         menu_github: GitHub
-        menu_home: Home
         menu_terms: Privacy and Terms
         meta_description: Tool to find geolocation and other information about any IP v4 and v6 address.
         service_api_description: Comprehensive information about any IPv4 or IPv6 address with JSON API over HTTPS.
