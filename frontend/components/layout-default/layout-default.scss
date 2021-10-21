@@ -16,6 +16,10 @@
   @include top-app-bar.ink-color(checkip-base.$top-app-bar-ink-color);
 }
 
+.ckp-top-bar-title {
+  font-family: checkip-base.$mono-font;
+}
+
 .mdc-drawer.ckp-drawer {
   @include drawer.item-activated-icon-ink-color(checkip-base.$drawer-activated-icon-ink-color);
   @include drawer.item-activated-text-ink-color(checkip-base.$drawer-activated-text-ink-color);

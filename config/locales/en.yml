@@ -3,7 +3,7 @@ en:
   pages:
     application:
       core:
-        brand: checkip.info
+        brand: CheckIP.info
         ip_geolocation_brand: DB-IP
         ip_geolocation_by_html: IP Geolocation by %{db_source_url}
         ip_geolocation_source: https://db-ip.com
