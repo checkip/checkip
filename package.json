@@ -31,6 +31,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@material/button": "^13.0.0",
     "@material/drawer": "^13.0.0",
     "@material/elevation": "^13.0.0",
     "@material/icon-button": "^13.0.0",

@@ -1123,6 +1123,24 @@
   dependencies:
     tslib "^2.1.0"
 
+"@material/button@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-13.0.0.tgz#0870da4069fb92dd5c3dbbaf1b58bcb62bb9dbed"
+  integrity sha512-lYorht6fcEd4P+dsLVp2BGtaY5cGYNp71LMajuDe71GZX3dZPoKeVvb+Ie1S7vcB+o+WLTeaisMk9/vA4gfi8A==
+  dependencies:
+    "@material/density" "^13.0.0"
+    "@material/dom" "^13.0.0"
+    "@material/elevation" "^13.0.0"
+    "@material/feature-targeting" "^13.0.0"
+    "@material/ripple" "^13.0.0"
+    "@material/rtl" "^13.0.0"
+    "@material/shape" "^13.0.0"
+    "@material/theme" "^13.0.0"
+    "@material/tokens" "^13.0.0"
+    "@material/touch-target" "^13.0.0"
+    "@material/typography" "^13.0.0"
+    tslib "^2.1.0"
+
 "@material/density@^13.0.0":
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/@material/density/-/density-13.0.0.tgz#5ae2fdec0418775014fed24e7ccdd5ba5d005d54"
@@ -1252,21 +1270,12 @@
     "@material/feature-targeting" "^13.0.0"
     tslib "^2.1.0"
 
-"@material/tooltip@^13.0.0":
+"@material/tokens@^13.0.0":
   version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@material/tooltip/-/tooltip-13.0.0.tgz#2a4360b1d9b07b7573d69e2a85d5522dec00b97d"
-  integrity sha512-/QinwEM0sYtRUthgOy7R+V4iwLMZ8SCd8A3PyGyTr27BUGWykwAUFdXyzT4rxLhDNcnDOYH14N+Z3Bom+UwO9Q==
+  resolved "https://registry.yarnpkg.com/@material/tokens/-/tokens-13.0.0.tgz#dbd85201dca575b79fe03788479e77b913d20f9c"
+  integrity sha512-t55CKVeAjABdSQCKjsvYvqrA6Z4f5varLpLloai8ZQU0giSl7qbUczV1i8y2pSOzpRTswD5JKM7a19qfsl/TCA==
   dependencies:
-    "@material/animation" "^13.0.0"
-    "@material/base" "^13.0.0"
-    "@material/dom" "^13.0.0"
     "@material/elevation" "^13.0.0"
-    "@material/feature-targeting" "^13.0.0"
-    "@material/rtl" "^13.0.0"
-    "@material/shape" "^13.0.0"
-    "@material/theme" "^13.0.0"
-    "@material/typography" "^13.0.0"
-    tslib "^2.1.0"
 
 "@material/top-app-bar@^13.0.0":
   version "13.0.0"

@@ -1,7 +1,13 @@
 <div class="mdc-layout-grid">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="ckp-snippet-box ckp-highlight mdc-elevation--z4"><pre><%= raw rougify(jsonify(@checker), 'json') %></pre></div>
+      <div class="ckp-snippet-box ckp-highlight mdc-elevation--z4">
+        <pre><%= raw rougify(jsonify(@checker), 'json') %></pre>
+        <button class="mdc-button mdc-button--unelevated ckp-button-clipboard" data-clipboard="<%= jsonify(@checker) %>">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label"><%= t('pages.application.core.button_copy') %></span>
+        </button>
+      </div>
     </div>
     <div class="mdc-layout-grid__cell ckp-text-box mdc-elevation--z4">
       <div class="mdc-typography--headline6 ckp-description-header"><%= t('pages.application.core.service_api_header') %></div>
