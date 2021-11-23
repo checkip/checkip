@@ -30,7 +30,6 @@ namespace :db_ip do
       puts "✓ #{File.basename(mmdb_file_path)}"
     end
 
-
     FileUtils.rm(city_lite_path)
 
     tempfile_asn_lite = Down.download(
