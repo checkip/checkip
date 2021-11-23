@@ -28,6 +28,7 @@ namespace :db_ip do
       )
     end
 
+    puts "====== #{DateTime.now.strftime('%Y-%m-%d %H:%M %:z')} ======"
     puts "Done - #{File.basename(city_lite_path)}"
 
     FileUtils.rm(city_lite_path)
@@ -57,7 +58,6 @@ namespace :db_ip do
     end
 
     puts "Done - #{File.basename(asn_lite_path)}"
-    puts '====================================='
 
     FileUtils.rm(asn_lite_path)
   end
