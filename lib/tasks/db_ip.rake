@@ -28,6 +28,8 @@ namespace :db_ip do
       )
     end
 
+    puts "Done - #{File.basename(city_lite_path)}"
+
     FileUtils.rm(city_lite_path)
 
     tempfile_asn_lite = Down.download(
@@ -53,6 +55,9 @@ namespace :db_ip do
         gz.read
       )
     end
+
+    puts "Done - #{File.basename(asn_lite_path)}"
+    puts '====================================='
 
     FileUtils.rm(asn_lite_path)
   end
