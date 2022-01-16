@@ -7,15 +7,15 @@ ruby '3.0.2'
 gem 'activemodel', '~> 6.1.0'
 
 # System
-gem 'bootsnap', '>= 1.4.4', require: false
-gem 'puma', '~> 5.1'
-gem 'webpacker', '~> 5.2'
+gem 'bootsnap', '>= 1.9.4', require: false
+gem 'puma', '~> 5.5'
+gem 'webpacker', '~> 5.4'
 
 # Other
 gem 'down', '~> 5.2', require: false
 gem 'maxmind-db', '~> 1.1'
 gem 'meta-rails', '~> 2.0'
-gem 'rouge', '~> 3.26'
+gem 'rouge', '~> 3.27'
 
 group :development do
   gem 'bcrypt_pbkdf'
