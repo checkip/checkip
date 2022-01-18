@@ -84,6 +84,11 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
+    lograge (0.11.2)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -137,6 +142,8 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.2.0)
+    request_store (1.5.1)
+      rack (>= 1.4)
     rexml (3.2.5)
     rouge (3.27.0)
     rspec-core (3.10.1)
@@ -224,6 +231,7 @@ DEPENDENCIES
   faker
   fuubar
   i18n-tasks
+  lograge (~> 0.11.2)
   maxmind-db (~> 1.1)
   meta-rails (~> 2.0)
   pry-rails
