@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/asn'      => 'api/checkers#asn', defaults: { format: 'json' }
   get '/json'     => 'api/checkers#json'
   get '/ua'       => 'api/checkers#ua'
- end
+
+  get '*unmatched_route' => 'application#route_not_found'
+end

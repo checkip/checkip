@@ -11,6 +11,9 @@ gem 'bootsnap', '>= 1.9.4', require: false
 gem 'puma', '~> 5.5'
 gem 'webpacker', '~> 5.4'
 
+# Logs
+gem 'lograge', '~> 0.11.2'
+
 # Other
 gem 'down', '~> 5.2', require: false
 gem 'maxmind-db', '~> 1.1'
