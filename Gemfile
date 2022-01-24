@@ -7,13 +7,13 @@ ruby '3.0.3'
 gem 'activemodel', '~> 6.1.0'
 
 # System
-gem 'bootsnap', '>= 1.9.4', require: false
+gem 'bootsnap', '>= 1.10.2', require: false
 gem 'jsbundling-rails', '~> 1.0'
 gem 'puma', '~> 5.5'
 gem 'sprockets-rails', '~> 3.4'
 
 # Logs
-gem 'lograge', '~> 0.11.2'
+gem 'lograge', '~> 0.11'
 
 # Other
 gem 'down', '~> 5.2', require: false
@@ -30,7 +30,6 @@ group :development do
   gem 'ed25519'
   gem 'i18n-tasks'
   gem 'pry-rails'
-  gem 'rack-mini-profiler'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
