@@ -4,12 +4,15 @@ extends:
 
 env:
   browser: true
+  node: true
   es6: true
 
 globals:
   Rails: readonly
 
 parser: "@babel/eslint-parser"
+parserOptions:
+  requireConfigFile: false
 
 rules:
   curly:

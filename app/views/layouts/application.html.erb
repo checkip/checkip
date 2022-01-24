@@ -5,7 +5,7 @@
     <%= meta_description if (yield :meta_description).present? %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_pack_tag 'application' %>
+    <%= stylesheet_link_tag 'application' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="canonical" href="<%= request.base_url + request.path %>">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v1=1642755600">
@@ -19,6 +19,6 @@
   </head>
   <body>
     <%= yield %>
-    <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
