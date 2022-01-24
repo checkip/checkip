@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Core
-gem 'activemodel', '~> 6.1.0'
+gem 'activemodel', '~> 7.0.1'
 
 # System
 gem 'bootsnap', '>= 1.10.2', require: false
