@@ -41,11 +41,10 @@ module.exports = {
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),
+    new webpack.ProvidePlugin({
+      Rails: '@rails/ujs',
+    }),
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin(),
   ],
 };
-
-new webpack.ProvidePlugin({
-  Rails: '@rails/ujs',
-});
