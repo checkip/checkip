@@ -24,16 +24,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-
-# Ignore Procfile.
-Procfile
-
 # Ignore environment variables.
 .env
 .env.*
@@ -42,3 +32,13 @@ Procfile
 
 # Ignore simplecov generated files.
 coverage
+
+# Ignore webpack/yarn generated files.
+/app/assets/builds/*
+!/app/assets/builds/.keep
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

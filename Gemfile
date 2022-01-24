@@ -8,8 +8,9 @@ gem 'activemodel', '~> 6.1.0'
 
 # System
 gem 'bootsnap', '>= 1.9.4', require: false
+gem 'jsbundling-rails', '~> 1.0'
 gem 'puma', '~> 5.5'
-gem 'webpacker', '~> 5.4'
+gem 'sprockets-rails', '~> 3.4'
 
 # Logs
 gem 'lograge', '~> 0.11.2'

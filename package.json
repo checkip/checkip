@@ -7,7 +7,8 @@
     "lint:js": "eslint \"frontend/**/*.js\"",
     "lint:ruby": "bundle exec rubocop --parallel",
     "lint": "npm-run-all --parallel lint:*",
-    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "build": "webpack --config webpack.config.js"
   },
   "lint-staged": {
     "*.rb": [
@@ -28,6 +29,8 @@
     }
   },
   "dependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -40,10 +43,14 @@
     "@material/top-app-bar": "^13.0.0",
     "@material/typography": "^13.0.0",
     "@rails/ujs": "^6.1.4",
-    "@rails/webpacker": "5.4.3",
-    "resolve-url-loader": "^4.0.0",
-    "sass": "1.42.0",
-    "sass-loader": "^10.2.0"
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.5.2",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-remove-empty-scripts": "^0.7.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
@@ -61,7 +68,6 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0",
-    "stylelint-prettier": "^1.2.0",
-    "webpack-dev-server": "^3.11.3"
+    "stylelint-prettier": "^1.2.0"
   }
 }
