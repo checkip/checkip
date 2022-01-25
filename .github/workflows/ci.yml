@@ -34,6 +34,10 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Setup Yarn dependencies
         run: yarn install --pure-lockfile
+      - name: Precompile assets
+        env:
+          RAILS_ENV: test
+        run: bundle exec rails assets:precompile
       - name: Run tests
         env:
           RAILS_ENV: test
