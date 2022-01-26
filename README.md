@@ -3,7 +3,7 @@
 [![CI](https://github.com/checkip/checkip/workflows/CI/badge.svg?branch=main)](https://github.com/checkip/checkip/actions?query=workflow%3ACI)
 [![Depfu](https://badges.depfu.com/badges/c6f8940cb635203631089a8f49a59ab0/overview.svg)](https://depfu.com/github/checkip/checkip?project_id=32130)
 
-CheckIP is an open-source solution for IP address analysis. Use it to build an in-house solution for privacy-sensitive tasks involving IP-based geolocation.
+CheckIP is an open-source tool for IP address analysis to build your on-premise infrastructure for privacy-sensitive tasks involving IP-related data research.
 
 ## Development
 
