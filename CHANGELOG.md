@@ -1,3 +1,24 @@
+# [0.11.0](https://github.com/checkip/checkip/compare/v0.10.0...v0.11.0) (2022-01-27)
+
+
+### Bug Fixes
+
+* **i18n:** remove unused key ([0450b3a](https://github.com/checkip/checkip/commit/0450b3a2864330de6c82cc08f98964d7f1914c91))
+
+
+### Features
+
+* **core:** upgrade to rails 7.0.1 ([41a321c](https://github.com/checkip/checkip/commit/41a321cc89b97d1139d705db49eb8a3ff9dbdb53))
+* **core:** upgrade to ruby 3.0.3 ([#4](https://github.com/checkip/checkip/issues/4)) ([00a533f](https://github.com/checkip/checkip/commit/00a533ff8a62df103621a3d504f2119f9baa922d))
+* **core:** use lograge ([#5](https://github.com/checkip/checkip/issues/5)) ([ac3976e](https://github.com/checkip/checkip/commit/ac3976ec118e19e99fc4bbaea725f82bd9118320))
+* **ux:** copy to clipboard button for the ip data ([13c9dde](https://github.com/checkip/checkip/commit/13c9dde45b1756eaf940be8b940401b2c0752bea))
+* **ux:** new favicon ([#6](https://github.com/checkip/checkip/issues/6)) ([5ee6af4](https://github.com/checkip/checkip/commit/5ee6af4427fe61e8e8b13a034c787ef1fb0f7270))
+* **ux:** new navigation with drawer ([0bcb882](https://github.com/checkip/checkip/commit/0bcb8829037acd2d2121edfbe3e6638100cea3a8))
+* **ux:** update title style ([718bd43](https://github.com/checkip/checkip/commit/718bd43e4eb9dddaddfe87ef8df5db4030ceb6dc))
+* **ux:** upgrade to material-components-web v13.0.0 ([b1be558](https://github.com/checkip/checkip/commit/b1be558e0b80008aca70885beb28a9171ea8bd7d))
+
+
+
 # [0.10.0](https://github.com/checkip/checkip/compare/v0.9.0...v0.10.0) (2021-09-18)
 
 
