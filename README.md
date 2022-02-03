@@ -26,7 +26,7 @@ bundle install
 yarn install
 
 # Fetch mmdb files
-bundle exec rake db_ip:fetch
+bundle exec rake mmdb:update
 
 # Run application
 bin/dev

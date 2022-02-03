@@ -3,23 +3,16 @@ class Checker
 
   include ActiveModel::Model
 
-  GEO_DB_FILE = File.join(
-    ENV.fetch('DBIP_MMDB_PATH'), "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-  ).freeze
-  ASN_DB_FILE = File.join(
-    ENV.fetch('DBIP_MMDB_PATH'), "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-  ).freeze
-
-  if File.exist?(GEO_DB_FILE)
+  if File.exist?(Checkip::Datasource::GEO_DB_FILE)
     GEO_DB = MaxMind::DB.new(
-      GEO_DB_FILE,
+      Checkip::Datasource::GEO_DB_FILE,
       mode: MaxMind::DB::MODE_MEMORY
     ).freeze
   end
 
-  if File.exist?(ASN_DB_FILE)
+  if File.exist?(Checkip::Datasource::ASN_DB_FILE)
     ASN_DB = MaxMind::DB.new(
-      ASN_DB_FILE,
+      Checkip::Datasource::ASN_DB_FILE,
       mode: MaxMind::DB::MODE_MEMORY
     ).freeze
   end

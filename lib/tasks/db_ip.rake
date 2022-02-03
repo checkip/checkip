@@ -2,17 +2,14 @@ require 'down'
 
 namespace :db_ip do
   desc 'Fetch new DB IP databases'
-  task fetch: :environment do
-    puts "===== #{DateTime.now.strftime('%Y-%m-%d %H:%M %:z')} ====="
-    puts "↓ #{ENV.fetch('DBIP_MMDB_PATH')}"
-
+  task :fetch, [:mmdb_dir_path] => [:environment] do |_t, args|
     tempfile_city_lite = Down.download(
       "https://download.db-ip.com/free/dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb.gz",
       max_size: 250 * 1024 * 1024
     )
 
     city_lite_path = File.join(
-      ENV.fetch('DBIP_MMDB_PATH'),
+      args[:mmdb_dir_path],
       "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb.gz"
     )
 
@@ -23,7 +20,7 @@ namespace :db_ip do
 
     Zlib::GzipReader.open(city_lite_path) do |gz|
       mmdb_file_path = File.join(
-        ENV.fetch('DBIP_MMDB_PATH'),
+        args[:mmdb_dir_path],
         "dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
       )
       File.binwrite(mmdb_file_path, gz.read)
@@ -38,9 +35,10 @@ namespace :db_ip do
     )
 
     asn_lite_path = File.join(
-      ENV.fetch('DBIP_MMDB_PATH'),
+      args[:mmdb_dir_path],
       "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb.gz"
     )
+
     FileUtils.mv(
       tempfile_asn_lite.path,
       asn_lite_path
@@ -48,7 +46,7 @@ namespace :db_ip do
 
     Zlib::GzipReader.open(asn_lite_path) do |gz|
       mmdb_file_path = File.join(
-        ENV.fetch('DBIP_MMDB_PATH'),
+        args[:mmdb_dir_path],
         "dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
       )
       File.binwrite(mmdb_file_path, gz.read)
