@@ -59,18 +59,4 @@ RSpec.configure do |config|
 
   # Include Factory Bot syntax
   config.include FactoryBot::Syntax::Methods
-
-  FileUtils.mkdir_p('tmp/fixtures')
-  FileUtils.cp(
-    'spec/fixtures/city-test-dummy.mmdb',
-    "tmp/fixtures/dbip-city-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-  )
-  FileUtils.cp(
-    'spec/fixtures/asn-test-dummy.mmdb',
-    "tmp/fixtures/dbip-asn-lite-#{DateTime.now.strftime('%Y-%m')}.mmdb"
-  )
-
-  config.after(:suite) do
-    FileUtils.rm_rf('tmp/fixtures', secure: true)
-  end
 end

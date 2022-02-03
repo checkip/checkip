@@ -22,8 +22,8 @@ RSpec.describe 'monitors GET #show', type: :request do
 
   context 'when not connected mmdb files' do
     before do
-      Checker.send(:remove_const, 'GEO_DB') if defined?(Checker::GEO_DB)
-      Checker.send(:remove_const, 'ASN_DB') if defined?(Checker::ASN_DB)
+      hide_const('Checker::GEO_DB')
+      hide_const('Checker::ASN_DB')
     end
 
     it 'responds with json' do
