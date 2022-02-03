@@ -25,7 +25,7 @@ set :branch, 'main'
 # append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+append :linked_dirs, 'mmdb', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -41,9 +41,6 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/syst
 
 # Capistrano::Maintenance
 set :maintenance_template_path, File.expand_path('../public/maintenance.html', __dir__)
-
-# Fix "Rails assets manifest file not found" error.
-Rake::Task['deploy:assets:backup_manifest'].clear_actions
 
 after 'deploy:finished',  'systemd:puma:restart'
 
