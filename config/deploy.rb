@@ -49,8 +49,17 @@ namespace :systemd do
     desc 'Puma.service restart (including puma.socket)'
     task :restart do
       on roles(:app) do
-        if test 'systemctl is-active puma.service --quiet'
+        systemctl_test = test(:systemctl, 'is-active puma.socket --quiet')
+        systemctl_capture = capture(:systemctl,
+                                    'is-active puma.socket',
+                                    raise_on_non_zero_exit: false)
+
+        if systemctl_test
           execute 'sudo systemctl restart puma.socket puma.service'
+        elsif systemctl_capture == 'inactive'
+          execute 'sudo systemctl enable puma.socket puma.service --now'
+        else
+          error "puma.socket - #{systemctl_capture}"
         end
       end
     end
