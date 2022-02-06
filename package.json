@@ -42,7 +42,7 @@
     "@material/list": "^13.0.0",
     "@material/top-app-bar": "^13.0.0",
     "@material/typography": "^13.0.0",
-    "@rails/ujs": "^6.1.4",
+    "@rails/ujs": "^7.0.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.5.2",
