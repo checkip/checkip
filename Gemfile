@@ -9,8 +9,8 @@ gem 'activemodel', '~> 7.0.1'
 # System
 gem 'bootsnap', '>= 1.10.2', require: false
 gem 'jsbundling-rails', '~> 1.0'
+gem 'propshaft', '~> 0.6'
 gem 'puma', '~> 5.5'
-gem 'sprockets-rails', '~> 3.4'
 
 # Logs
 gem 'lograge', '~> 0.11'
