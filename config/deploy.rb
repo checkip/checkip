@@ -42,6 +42,9 @@ append :linked_dirs, 'mmdb', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'pub
 # Capistrano::Maintenance
 set :maintenance_template_path, File.expand_path('../public/maintenance.html', __dir__)
 
+# Fix for Capistrano::FileNotFound: Rails assets manifest file not found.
+Rake::Task['deploy:assets:backup_manifest'].clear_actions
+
 after 'deploy:finished',  'systemd:puma:restart'
 
 namespace :systemd do
