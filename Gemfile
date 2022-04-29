@@ -23,9 +23,9 @@ gem 'rouge', '~> 3.27'
 
 group :development do
   gem 'bcrypt_pbkdf'
-  gem 'capistrano', '3.16.0'
+  gem 'capistrano', '3.17.0'
   gem 'capistrano-maintenance', '1.2.1', require: false
-  gem 'capistrano-rails', '1.6.1', require: false
+  gem 'capistrano-rails', '1.6.2', require: false
   gem 'capistrano-rvm', '0.1.2', require: false
   gem 'ed25519'
   gem 'i18n-tasks'
