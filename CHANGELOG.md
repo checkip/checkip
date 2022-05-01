@@ -1,3 +1,13 @@
+# [0.12.0](https://github.com/checkip/checkip/compare/v0.11.0...v0.12.0) (2022-05-02)
+
+
+### Features
+
+* **core:** configurable geolocation provider ([#8](https://github.com/checkip/checkip/issues/8)) ([ddd7fce](https://github.com/checkip/checkip/commit/ddd7fce6667f40afd5fd57d7fa84e1fad918cea4))
+* **core:** upgrade to ruby 3.0.4 ([#15](https://github.com/checkip/checkip/issues/15)) ([52765b9](https://github.com/checkip/checkip/commit/52765b995c5715d79882a9e800a1afae8bc85b6e))
+
+
+
 # [0.11.0](https://github.com/checkip/checkip/compare/v0.10.0...v0.11.0) (2022-01-27)
 
 
