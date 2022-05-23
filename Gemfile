@@ -21,6 +21,9 @@ gem 'maxmind-db', '~> 1.1'
 gem 'meta-rails', '~> 2.0'
 gem 'rouge', '~> 3.27'
 
+# Monitoring
+gem 'elastic-apm', '~> 4.5' unless ENV['ELASTIC_SERVER_URL'].nil?
+
 group :development do
   gem 'bcrypt_pbkdf'
   gem 'capistrano', '3.17.0'
