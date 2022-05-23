@@ -22,7 +22,7 @@ gem 'meta-rails', '~> 2.0'
 gem 'rouge', '~> 3.27'
 
 # Monitoring
-gem 'elastic-apm', '~> 4.5' unless ENV['ELASTIC_SERVER_URL'].nil?
+gem 'elastic-apm', '~> 4.5'
 
 group :development do
   gem 'bcrypt_pbkdf'
