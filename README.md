@@ -31,6 +31,9 @@ bundle exec rake mmdb:update
 # Run application
 bin/dev
 ```
+## Sponsors
+
+<a href="https://www.jetbrains.com/"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="Sponsored by JetBrains" width="130" height="130"></a>
 
 ## License
 
