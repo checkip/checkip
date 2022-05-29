@@ -45,7 +45,7 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-bundler (2.0.1)
+    capistrano-bundler (2.1.0)
       capistrano (~> 3.1)
     capistrano-maintenance (1.2.1)
       capistrano (>= 3.0)
@@ -174,7 +174,7 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
-    regexp_parser (2.4.0)
+    regexp_parser (2.5.0)
     request_store (1.5.1)
       rack (>= 1.4)
     rexml (3.2.5)
@@ -280,7 +280,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.0.4p208
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.2.33
+   2.3.14
