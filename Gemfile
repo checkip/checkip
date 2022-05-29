@@ -32,6 +32,7 @@ group :development do
   gem 'capistrano-rvm', '0.1.2', require: false
   gem 'ed25519'
   gem 'i18n-tasks'
+  gem 'net-ssh', '7.0.0.beta1', require: 'net/ssh'
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
