@@ -10,6 +10,6 @@ FactoryBot.define do
       ip { 'ip address' }
     end
 
-    initialize_with { new(ip: ip) }
+    initialize_with { new(ip:) }
   end
 end
