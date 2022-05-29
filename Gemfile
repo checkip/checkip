@@ -11,6 +11,7 @@ gem 'bootsnap', '>= 1.10.2', require: false
 gem 'jsbundling-rails', '~> 1.0'
 gem 'propshaft', '~> 0.6'
 gem 'puma', '~> 5.5'
+gem 'sd_notify', '~> 0.1.1', require: false
 
 # Logs
 gem 'lograge', '~> 0.11'
