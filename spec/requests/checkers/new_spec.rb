@@ -12,7 +12,7 @@ RSpec.describe 'checkers GET #new', type: :request do
 
   it 'renders the :home template when html format' do
     get root_path
-    expect(response.status).to eq 200
+    expect(response).to have_http_status(:ok)
   end
 
   it 'renders ip when curl user-agent' do
