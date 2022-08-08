@@ -1,3 +1,17 @@
+# [0.13.0](https://github.com/checkip/checkip/compare/v0.12.0...v0.13.0) (2022-08-08)
+
+
+### Bug Fixes
+
+* **core:** verify geo data existence ([#19](https://github.com/checkip/checkip/issues/19)) ([b25037c](https://github.com/checkip/checkip/commit/b25037c558615bd898d702ae2e62e921236b76f2))
+
+
+### Features
+
+* **core:** upgrade to ruby 3.1.2 ([#17](https://github.com/checkip/checkip/issues/17)) ([1b5e7b8](https://github.com/checkip/checkip/commit/1b5e7b81fb2b50656dc475fc3aaab222a155eca8))
+
+
+
 # [0.12.0](https://github.com/checkip/checkip/compare/v0.11.0...v0.12.0) (2022-05-02)
 
 
