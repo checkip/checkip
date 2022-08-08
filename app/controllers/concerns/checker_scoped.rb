@@ -23,10 +23,10 @@ module CheckerScoped
       unless geo_data.nil?
         checker_hash.merge!(
           {
-            city: geo_data['city']['names']['en'],
-            region: geo_data['subdivisions'][0]['names']['en'],
-            country: geo_data['country']['iso_code'],
-            loc: format_loc(geo_data['location'])
+            city: (geo_data['city']['names']['en'] if geo_data.key?('city')),
+            region: (geo_data['subdivisions'][0]['names']['en'] if geo_data.key?('subdivisions')),
+            country: (geo_data['country']['iso_code'] if geo_data.key?('country')),
+            loc: (format_loc(geo_data['location']) if geo_data.key?('location'))
           }
         )
       end
