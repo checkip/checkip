@@ -22,6 +22,11 @@
           <i class="fab fa-github fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
           <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_github') %></span>
         <% end %>
+        <%= link_to t('pages.application.core.menu_status_source'), class: "mdc-deprecated-list-item" do %>
+          <span class="mdc-deprecated-list-item__ripple"></span>
+          <i class="fas fa-signal fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
+          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_status') %></span>
+        <% end %>
       </nav>
     </div>
   </aside>
