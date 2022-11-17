@@ -10,7 +10,7 @@ gem 'activemodel', '~> 7.0.1'
 gem 'bootsnap', '>= 1.10.2', require: false
 gem 'jsbundling-rails', '~> 1.0'
 gem 'propshaft', '~> 0.6'
-gem 'puma', '~> 5.5'
+gem 'puma', '~> 6.0'
 gem 'sd_notify', '~> 0.1.1', require: false
 
 # Logs
@@ -27,13 +27,13 @@ gem 'elastic-apm', '~> 4.5'
 
 group :development do
   gem 'bcrypt_pbkdf'
-  gem 'capistrano', '3.17.0'
+  gem 'capistrano', '3.17.1'
   gem 'capistrano-maintenance', '1.2.1', require: false
   gem 'capistrano-rails', '1.6.2', require: false
   gem 'capistrano-rvm', '0.1.2', require: false
   gem 'ed25519'
   gem 'i18n-tasks'
-  gem 'net-ssh', '7.0.0.beta1', require: 'net/ssh'
+  gem 'net-ssh', '7.0.1', require: 'net/ssh'
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false

@@ -43,14 +43,14 @@
     "@material/top-app-bar": "^14.0.0",
     "@material/typography": "^14.0.0",
     "@rails/ujs": "^7.0.1",
-    "babel-loader": "^8.2.3",
+    "babel-loader": "^9.1.0",
     "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.5.2",
     "sass": "^1.49.0",
     "sass-loader": "^13.0.0",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
-    "webpack-remove-empty-scripts": "^0.8.0"
+    "webpack-remove-empty-scripts": "^1.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
@@ -64,10 +64,10 @@
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
-    "stylelint": "^14.3.0",
+    "stylelint": "^14.15.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^9.0.1",
-    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard": "^29.0.0",
     "stylelint-prettier": "^2.0.0"
   }
 }
