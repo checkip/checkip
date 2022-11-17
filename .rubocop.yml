@@ -54,3 +54,6 @@ RSpec/ExampleLength:
 
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
+
+RSpec/Rails/InferredSpecType:
+  Enabled: false
