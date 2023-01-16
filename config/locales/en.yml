@@ -3,12 +3,13 @@ en:
   pages:
     application:
       core:
+        app: CheckIP
         brand: CheckIP.info
         button_copy: Copy
         ip_geolocation_brand: DB-IP
         ip_geolocation_by_html: IP Geolocation by %{db_source_url}
         ip_geolocation_source: https://db-ip.com
-        made_with_html: Made with %{heart} and %{checkip}
+        made_with_html: Made with %{heart} and %{appname}
         menu_api: Documentation
         menu_github: GitHub
         menu_status: Status
