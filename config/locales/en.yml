@@ -4,6 +4,7 @@ en:
     application:
       core:
         app: CheckIP
+        app_source: https://github.com/checkip/checkip
         brand: CheckIP.info
         button_copy: Copy
         ip_geolocation_brand: DB-IP

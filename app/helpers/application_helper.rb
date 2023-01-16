@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def app_name_footer
-    link_to full_app_name, 'https://github.com/checkip/checkip'
+    link_to full_app_name, t('pages.application.core.app_source')
   end
 
   private
