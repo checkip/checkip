@@ -1,3 +1,15 @@
+# [0.14.0](https://github.com/checkip/checkip/compare/v0.13.0...v0.14.0) (2023-01-17)
+
+
+### Features
+
+* **core:** upgrade to ruby 3.1.3 ([#22](https://github.com/checkip/checkip/issues/22)) ([6bf4a7c](https://github.com/checkip/checkip/commit/6bf4a7c128d5400301350435f12f1f729176d443))
+* **i18n:** source url in config file ([132259f](https://github.com/checkip/checkip/commit/132259f6f640616163386f1850020d613b76d3d3))
+* **ux:** app version in footer ([#25](https://github.com/checkip/checkip/issues/25)) ([d8e9c84](https://github.com/checkip/checkip/commit/d8e9c84c15f56552dac312632d6d53e52fbaf2fc))
+* **ux:** status page link ([#20](https://github.com/checkip/checkip/issues/20)) ([2db5340](https://github.com/checkip/checkip/commit/2db53406054fd342fb7c1c0cdf22b6ff2f28a17a))
+
+
+
 # [0.13.0](https://github.com/checkip/checkip/compare/v0.12.0...v0.13.0) (2022-08-08)
 
 
