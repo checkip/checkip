@@ -1,6 +1,6 @@
 # CheckIP
 
-[![CI](https://github.com/checkip/checkip/workflows/CI/badge.svg?branch=main)](https://github.com/checkip/checkip/actions?query=workflow%3ACI)
+[![CI](https://github.com/checkip/checkip/actions/workflows/ci.yml/badge.svg)](https://github.com/checkip/checkip/actions/workflows/ci.yml)
 [![Depfu](https://badges.depfu.com/badges/c6f8940cb635203631089a8f49a59ab0/overview.svg)](https://depfu.com/github/checkip/checkip?project_id=32130)
 
 CheckIP is an open-source tool for IP address research and analysis. It can be used as a standalone service or with existing infrastructure for privacy-sensitive tasks. Support IPv4 and IPv6.
@@ -37,4 +37,4 @@ bin/dev
 
 ## License
 
-Copyright 2020 - 2022 Dmitriy Tarasov. Released under the [BSD-3-Clause](LICENSE) license.
+Released under the [BSD-3-Clause](LICENSE) license.
