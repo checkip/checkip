@@ -7,18 +7,15 @@ namespace :db_ip do
     db_remote_path = 'https://download.db-ip.com/free'
 
     db_city_file = "dbip-city-lite-#{db_date}.mmdb.gz"
-    db_city_file_path = File.join(args[:mmdb_dir_path], db_city_file)
     db_city_file_max_size = 200 * 1024 * 1024
 
     db_asn_file = "dbip-asn-lite-#{db_date}.mmdb.gz"
-    db_asn_file_path = File.join(args[:mmdb_dir_path], db_asn_file)
     db_asn_file_max_size = 50 * 1024 * 1024
 
     if check_remote("#{db_remote_path}/#{db_city_file}")
       fetch_remote(
         remote_path: db_remote_path,
         file_name: db_city_file,
-        file_local_path: db_city_file_path,
         file_max_size: db_city_file_max_size,
         local_dir: args[:mmdb_dir_path]
       )
@@ -30,7 +27,6 @@ namespace :db_ip do
       fetch_remote(
         remote_path: db_remote_path,
         file_name: db_asn_file,
-        file_local_path: db_asn_file_path,
         file_max_size: db_asn_file_max_size,
         local_dir: args[:mmdb_dir_path]
       )
@@ -51,10 +47,11 @@ namespace :db_ip do
     def fetch_remote(
       remote_path:,
       file_name:,
-      file_local_path:,
       file_max_size:,
       local_dir:
     )
+      file_local_path = File.join(local_dir, file_name)
+
       tempfile = Down.download(
         "#{remote_path}/#{file_name}",
         max_size: file_max_size
