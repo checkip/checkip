@@ -14,51 +14,29 @@ namespace :db_ip do
     db_asn_file_path = File.join(args[:mmdb_dir_path], db_asn_file)
     db_asn_file_max_size = 50 * 1024 * 1024
 
-    unless check_remote("#{db_remote_path}/#{db_city_file}")
+    if check_remote("#{db_remote_path}/#{db_city_file}")
+      fetch_remote(
+        remote_path: db_remote_path,
+        file_name: db_city_file,
+        file_local_path: db_city_file_path,
+        file_max_size: db_city_file_max_size,
+        local_dir: args[:mmdb_dir_path]
+      )
+    else
       puts "✗ #{db_remote_path}/#{db_city_file}"
-      next
     end
 
-    tempfile_city_lite = Down.download(
-      "#{db_remote_path}/#{db_city_file}",
-      max_size: db_city_file_max_size
-    )
-
-    FileUtils.mv(tempfile_city_lite.path, db_city_file_path)
-
-    Zlib::GzipReader.open(db_city_file_path) do |gz|
-      mmdb_file_path = File.join(
-        args[:mmdb_dir_path],
-        db_city_file.chomp('.gz')
+    if check_remote("#{db_remote_path}/#{db_asn_file}")
+      fetch_remote(
+        remote_path: db_remote_path,
+        file_name: db_asn_file,
+        file_local_path: db_asn_file_path,
+        file_max_size: db_asn_file_max_size,
+        local_dir: args[:mmdb_dir_path]
       )
-      File.binwrite(mmdb_file_path, gz.read)
-      puts "✓ #{File.basename(mmdb_file_path)}"
-    end
-
-    FileUtils.rm(db_city_file_path)
-
-    unless check_remote("#{db_remote_path}/#{db_asn_file}")
+    else
       puts "✗ #{db_remote_path}/#{db_asn_file}"
-      next
     end
-
-    tempfile_asn_lite = Down.download(
-      "#{db_remote_path}/#{db_asn_file}",
-      max_size: db_asn_file_max_size
-    )
-
-    FileUtils.mv(tempfile_asn_lite.path, db_asn_file_path)
-
-    Zlib::GzipReader.open(db_asn_file_path) do |gz|
-      mmdb_file_path = File.join(
-        args[:mmdb_dir_path],
-        db_asn_file.chomp('.gz')
-      )
-      File.binwrite(mmdb_file_path, gz.read)
-      puts "✓ #{File.basename(mmdb_file_path)}"
-    end
-
-    FileUtils.rm(db_asn_file_path)
   end
 
   private
@@ -68,5 +46,31 @@ namespace :db_ip do
       remote_file.data[:status] == 200
     rescue Down::ResponseError
       false
+    end
+
+    def fetch_remote(
+      remote_path:,
+      file_name:,
+      file_local_path:,
+      file_max_size:,
+      local_dir:
+    )
+      tempfile = Down.download(
+        "#{remote_path}/#{file_name}",
+        max_size: file_max_size
+      )
+
+      FileUtils.mv(tempfile.path, file_local_path)
+
+      Zlib::GzipReader.open(file_local_path) do |gz|
+        mmdb_file_path = File.join(
+          local_dir,
+          file_name.chomp('.gz')
+        )
+        File.binwrite(mmdb_file_path, gz.read)
+        puts "✓ #{File.basename(mmdb_file_path)}"
+      end
+
+      FileUtils.rm(file_local_path)
     end
 end
