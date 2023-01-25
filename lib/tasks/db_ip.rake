@@ -12,7 +12,9 @@ namespace :db_ip do
     db_asn_file = "dbip-asn-lite-#{db_date}.mmdb.gz"
     db_asn_file_max_size = 50 * 1024 * 1024
 
-    if check_remote("#{db_remote_path}/#{db_city_file}")
+    if check_local(file_name: db_city_file, local_dir: args[:mmdb_dir_path])
+      puts "— #{db_city_file}"
+    elsif check_remote("#{db_remote_path}/#{db_city_file}")
       fetch_remote(
         remote_path: db_remote_path,
         file_name: db_city_file,
@@ -23,7 +25,9 @@ namespace :db_ip do
       puts "✗ #{db_remote_path}/#{db_city_file}"
     end
 
-    if check_remote("#{db_remote_path}/#{db_asn_file}")
+    if check_local(file_name: db_asn_file, local_dir: args[:mmdb_dir_path])
+      puts "— #{db_asn_file}"
+    elsif check_remote("#{db_remote_path}/#{db_asn_file}")
       fetch_remote(
         remote_path: db_remote_path,
         file_name: db_asn_file,
@@ -31,11 +35,20 @@ namespace :db_ip do
         local_dir: args[:mmdb_dir_path]
       )
     else
-      puts "✗ #{db_remote_path}/#{db_asn_file}"
+      puts "✗ #{db_remote_path}/#{db_city_file}"
     end
   end
 
   private
+
+    def check_local(file_name:, local_dir:)
+      mmdb_file_path = File.join(
+        local_dir,
+        file_name.chomp('.gz')
+      )
+
+      File.exist?(mmdb_file_path)
+    end
 
     def check_remote(remote_file_path)
       remote_file = Down.open(remote_file_path)
