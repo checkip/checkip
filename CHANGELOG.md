@@ -1,3 +1,16 @@
+# [0.15.0](https://github.com/checkip/checkip/compare/v0.14.0...v0.15.0) (2023-01-27)
+
+
+### Features
+
+* **core:** check mmdb file existence before download ([7401a23](https://github.com/checkip/checkip/commit/7401a23ae5a0f91656a84dc666862e8a13903c0c))
+* **core:** check remote mmdb source before download ([a9e79fa](https://github.com/checkip/checkip/commit/a9e79faaed4a76980a43df061cbb69245b25edc9))
+* **core:** rake task for local mmdb files metadata ([2c2f094](https://github.com/checkip/checkip/commit/2c2f0947d3a34fd19463c4e3b817c931400acb47))
+* **core:** update mmdb retrieving from upstream ([7d83a72](https://github.com/checkip/checkip/commit/7d83a720c113cf606df8e896ff8dffb6f583866e))
+* **core:** upgrade to ruby 3.2.0 ([#26](https://github.com/checkip/checkip/issues/26)) ([72a8737](https://github.com/checkip/checkip/commit/72a87379845550febf85d80ad65d7e162fd49e17))
+
+
+
 # [0.14.0](https://github.com/checkip/checkip/compare/v0.13.0...v0.14.0) (2023-01-17)
 
 
