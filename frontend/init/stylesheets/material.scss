@@ -1,5 +1,4 @@
 @use './checkip-base';
-
 @use '@material/theme' with (
   $primary: checkip-base.$core-primary-color,
   $secondary: checkip-base.$core-secondary-color,
@@ -7,7 +6,6 @@
   $on-primary: checkip-base.$core-on-primary,
   $on-surface: checkip-base.$core-on-surface
 );
-
 @use '@material/typography' with (
   $font-family: checkip-base.$body-font
 );

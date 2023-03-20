@@ -3,6 +3,9 @@ extends:
   - stylelint-config-sass-guidelines
   - stylelint-prettier/recommended
 
+plugins:
+  - stylelint-scss
+
 rules:
   function-no-unknown:
     - true
@@ -10,3 +13,5 @@ rules:
       - lighten
       - darken
       - string.unquote
+  scss/no-global-function-names:
+    - null
