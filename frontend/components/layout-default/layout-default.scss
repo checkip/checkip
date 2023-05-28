@@ -6,7 +6,6 @@
 @use '@material/top-app-bar';
 @use '@material/top-app-bar/mdc-top-app-bar';
 @use '@material/typography/mdc-typography';
-
 @include drawer.core-styles;
 @include drawer.modal-core-styles;
 @include list.deprecated-core-styles;
