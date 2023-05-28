@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.15.0",
   "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs rollup.config.js",
     "lint:css": "stylelint \"frontend/**/*.scss\"",
     "lint:js": "eslint \"frontend/**/*.js\"",
     "lint:ruby": "bundle exec rubocop --parallel",
     "lint": "npm-run-all --parallel lint:*",
-    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "build": "webpack --config webpack.config.js"
+    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "lint-staged": {
     "*.rb": [
@@ -42,15 +42,12 @@
     "@material/list": "^14.0.0",
     "@material/top-app-bar": "^14.0.0",
     "@material/typography": "^14.0.0",
-    "@rails/ujs": "^7.0.1",
-    "babel-loader": "^9.1.0",
-    "css-loader": "^6.5.1",
-    "mini-css-extract-plugin": "^2.5.2",
-    "sass": "^1.49.0",
-    "sass-loader": "^13.0.0",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-remove-empty-scripts": "^1.0.1"
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "postcss": "^8.4.21",
+    "rollup": "^3.23.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.49.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
