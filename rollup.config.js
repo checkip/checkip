@@ -1,6 +1,7 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
+import terser from '@rollup/plugin-terser';
 import path from 'node:path';
 
 export default {
@@ -25,6 +26,7 @@ export default {
       extract: path.resolve(__dirname, 'app/assets/builds/application.css'),
       inject: false,
       sourceMap: true,
+      minimize: true,
       use: {
         sass: {
           includePaths: [
@@ -34,5 +36,6 @@ export default {
         },
       },
     }),
+    terser(),
   ],
 };
