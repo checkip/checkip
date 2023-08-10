@@ -2,6 +2,7 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-factory_bot
 
 AllCops:
   Exclude:
@@ -57,3 +58,6 @@ RSpec/MultipleMemoizedHelpers:
 
 RSpec/Rails/InferredSpecType:
   Enabled: false
+
+RSpec/Rails/NegationBeValid:
+  EnforcedStyle: be_invalid
