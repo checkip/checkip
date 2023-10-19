@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 
 # Core
-gem 'activemodel', '~> 7.0.1'
+gem 'activemodel', '~> 7.1.1'
 
 # System
 gem 'bootsnap', '>= 1.10.2', require: false
@@ -14,7 +14,7 @@ gem 'puma', '~> 6.0'
 gem 'sd_notify', '~> 0.1.1', require: false
 
 # Logs
-gem 'lograge', '~> 0.11'
+gem 'lograge', '~> 0.14'
 
 # Other
 gem 'down', '~> 5.2', require: false
@@ -27,7 +27,7 @@ gem 'elastic-apm', '~> 4.5'
 
 group :development do
   gem 'bcrypt_pbkdf'
-  gem 'capistrano', '3.17.3'
+  gem 'capistrano', '3.18.0'
   gem 'capistrano-maintenance', '1.2.1', require: false
   gem 'capistrano-rails', '1.6.3', require: false
   gem 'capistrano-rvm', '0.1.2', require: false
