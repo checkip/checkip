@@ -45,6 +45,7 @@ set :maintenance_template_path, File.expand_path('../public/maintenance.html', _
 # Fix for Capistrano::FileNotFound: Rails assets manifest file not found.
 Rake::Task['deploy:assets:backup_manifest'].clear_actions
 
+after 'deploy:finished',  'checkip:mmdb:update'
 after 'deploy:finished',  'systemd:puma:restart'
 
 namespace :systemd do
@@ -63,6 +64,21 @@ namespace :systemd do
           execute 'sudo systemctl enable puma.socket puma.service --now'
         else
           error "puma.socket - #{systemctl_capture}"
+        end
+      end
+    end
+  end
+end
+
+namespace :checkip do
+  namespace :mmdb do
+    desc 'Fetch new MMDB files'
+    task :update do
+      on roles(:app) do
+        within release_path do
+          with rails_env: fetch(:rails_env) do
+            execute :rake, 'mmdb:update'
+          end
         end
       end
     end
