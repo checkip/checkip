@@ -1,34 +1,44 @@
-current_path = ENV.fetch('CHECKIP_CURRENT_PATH') { '/var/www/checkip/current' }
-shared_path  = ENV.fetch('CHECKIP_SHARED_PATH') { '/var/www/checkip/shared' }
+# This configuration file will be evaluated by Puma. The top-level methods that
+# are invoked here are part of Puma's configuration DSL. For more information
+# about methods provided by the DSL, see https://puma.io/puma/Puma/DSL.html.
 
-directory current_path.to_s
-rackup "#{current_path}/config.ru"
-environment ENV.fetch('RAILS_ENV') { 'production' }
-
-pidfile ENV.fetch("PIDFILE") { "#{shared_path}/tmp/pids/puma.pid" }
-state_path "#{shared_path}/tmp/pids/puma.state"
-stdout_redirect "#{shared_path}/log/puma_access.log", "#{shared_path}/log/puma_error.log", true
-
-max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
-min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
+# Puma can serve each request in a thread from an internal thread pool.
+# The `threads` method setting takes two numbers: a minimum and maximum.
+# Any libraries that use thread pools should be configured to match
+# the maximum value specified for Puma. Default is set to 5 threads for minimum
+# and maximum; this matches the default thread size of Active Record.
+max_threads_count = ENV.fetch('RAILS_MAX_THREADS') { 5 }
+min_threads_count = ENV.fetch('RAILS_MIN_THREADS') { max_threads_count }
 threads min_threads_count, max_threads_count
 
-bind "unix://#{shared_path}/tmp/sockets/puma.sock"
-
-on_restart do
-  puts 'Refreshing Gemfile'
-  ENV['BUNDLE_GEMFILE'] = ''
-end
-
 # Specifies that the worker count should equal the number of processors in production.
-if ENV["RAILS_ENV"] == "production"
-  require "concurrent-ruby"
-  worker_count = Integer(ENV.fetch("WEB_CONCURRENCY") { Concurrent.physical_processor_count })
+if ENV['RAILS_ENV'] == 'production'
+  require 'concurrent-ruby'
+  worker_count = Integer(ENV.fetch('WEB_CONCURRENCY') { Concurrent.physical_processor_count })
   workers worker_count if worker_count > 1
 end
 
-prune_bundler
+# Specifies the `worker_timeout` threshold that Puma will use to wait before
+# terminating a worker in development environments.
+# worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
-tag 'checkip'
+# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+# port ENV.fetch("PORT") { 3000 }
 
+# Specifies the `environment` that Puma will run in.
+environment ENV.fetch('RAILS_ENV') { 'production' }
+
+# Specifies the `pidfile` that Puma will use.
+pidfile ENV.fetch('PIDFILE') { "#{ENV.fetch('CHECKIP_APP_PATH')}/tmp/pids/puma.pid" }
+
+# Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
+
+# Bind Puma to a a UNIX Socket
+bind "unix://#{ENV.fetch('CHECKIP_APP_PATH')}/tmp/sockets/puma.sock"
+
+# Redirect Puma STDOUT and STDERR to files
+stdout_redirect "#{ENV.fetch('CHECKIP_APP_PATH')}/log/puma_access.log", "#{ENV.fetch('CHECKIP_APP_PATH')}/log/puma_error.log", true
+
+# Additional text to display in process listing
+tag 'checkip'
