@@ -7,7 +7,7 @@ CheckIP is an open-source tool for IP address research and analysis. It can be u
 
 ## Development
 
-Ensure your system has the [Ruby](https://www.ruby-lang.org/) version specified in the [`.ruby-version`](.ruby-version) and [Yarn v1 (classic)](https://classic.yarnpkg.com/).
+Ensure your system has the [Ruby](https://www.ruby-lang.org/) version specified in the [`.ruby-version`](.ruby-version), [Node.js v18+](https://nodejs.org/), [Yarn v1 (classic)](https://classic.yarnpkg.com/).
 
 ```bash
 # Clone repository
