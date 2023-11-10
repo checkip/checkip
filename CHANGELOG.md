@@ -1,3 +1,14 @@
+# [0.16.0](https://github.com/checkip/checkip/compare/v0.15.0...v0.16.0) (2023-11-10)
+
+
+### Features
+
+* **core:** upgrade to rails 7.1.1 ([c082033](https://github.com/checkip/checkip/commit/c08203303338bf6e25bc7cab4349fe5201bc404b))
+* **core:** upgrade to ruby 3.2.2 ([461b07c](https://github.com/checkip/checkip/commit/461b07c6f7feac8edb419494be0292dc4114eab5))
+* **infrastructure:** replace webpack with rollup ([#31](https://github.com/checkip/checkip/issues/31)) ([d8384e7](https://github.com/checkip/checkip/commit/d8384e7fa2a9746821a2c61fc68abecf79c9e1e5), [a4d9a61](https://github.com/checkip/checkip/commit/a4d9a61828d98306615427d7451ec46d12ce64c4))
+* **infrastructure:** optimize deployment for production
+
+
 # [0.15.0](https://github.com/checkip/checkip/compare/v0.14.0...v0.15.0) (2023-01-27)
 
 
