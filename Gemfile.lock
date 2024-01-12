@@ -46,7 +46,7 @@ GEM
       smart_properties
     bigdecimal (3.1.5)
     bindex (0.8.1)
-    bootsnap (1.17.0)
+    bootsnap (1.17.1)
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
@@ -81,7 +81,7 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     ed25519 (1.3.0)
-    elastic-apm (4.7.0)
+    elastic-apm (4.7.1)
       concurrent-ruby (~> 1.0)
       http (>= 3.0)
       ruby2_keywords
@@ -147,7 +147,7 @@ GEM
       railties (>= 6.0)
     method_source (1.0.0)
     mini_portile2 (2.8.5)
-    minitest (5.20.0)
+    minitest (5.21.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
     net-scp (4.0.0)
@@ -160,7 +160,7 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.24.0)
-    parser (3.3.0.2)
+    parser (3.3.0.3)
       ast (~> 2.4.1)
       racc
     propshaft (0.8.0)
