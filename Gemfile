@@ -44,7 +44,7 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'dotenv-rails'
+  gem 'dotenv'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'fuubar'
