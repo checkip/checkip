@@ -12,6 +12,6 @@ module CliDetection
     end
 
     def ua_parse(user_agent)
-      user_agent =~ /\A(curl|Wget|HTTPie|httpie-go|Go-http-client|Faraday)/
+      user_agent =~ /\A(curl|Wget|HTTPie|httpie-go|Go-http-client|Faraday|Apache-HttpClient)/
     end
 end

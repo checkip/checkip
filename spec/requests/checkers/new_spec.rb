@@ -9,6 +9,7 @@ RSpec.describe 'checkers GET #new', type: :request do
   let(:ua_httpie_go) { 'httpie-go/0.7.0' }
   let(:ua_go_http_client) { 'Go-http-client/1.1' }
   let(:ua_faraday) { 'Faraday v1.7.2' }
+  let(:ua_apache_httpclient) { 'Apache-HttpClient/4.5.14 (Java/17.0.9)' }
 
   it 'renders the :home template when html format' do
     get root_path
@@ -42,6 +43,11 @@ RSpec.describe 'checkers GET #new', type: :request do
 
   it 'renders ip when faraday user-agent' do
     get root_path, headers: { HTTP_USER_AGENT: ua_faraday, REMOTE_ADDR: user_ip }
+    expect(response.body).to eq "1.1.1.1\n"
+  end
+
+  it 'renders ip when apache-httpclient user-agent' do
+    get root_path, headers: { HTTP_USER_AGENT: ua_apache_httpclient, REMOTE_ADDR: user_ip }
     expect(response.body).to eq "1.1.1.1\n"
   end
 
