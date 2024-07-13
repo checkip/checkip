@@ -30,7 +30,7 @@ group :development do
   gem 'capistrano', '3.19.1'
   gem 'capistrano-maintenance', '1.2.1', require: false
   gem 'capistrano-rails', '1.6.3', require: false
-  gem 'capistrano-rvm', '0.1.2', require: false
+  gem 'capistrano-rbenv', '2.2.0', require: false
   gem 'ed25519'
   gem 'i18n-tasks'
   gem 'net-ssh', require: 'net/ssh'
