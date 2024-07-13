@@ -1,3 +1,13 @@
+# [0.17.0](https://github.com/checkip/checkip/compare/v0.16.0...v0.17.0) (2024-07-13)
+
+
+### Features
+
+* **core:** detect apache-httpclient ([#39](https://github.com/checkip/checkip/issues/39)) ([7dee10e](https://github.com/checkip/checkip/commit/7dee10ee0e2eb6c941c8572e8f1c2503611d6fda))
+* **core:** upgrade to ruby 3.3.4 ([1e7750b](https://github.com/checkip/checkip/commit/1e7750bc4315bf8a14cfc4ff3735e0b3111d3996))
+
+
+
 # [0.16.0](https://github.com/checkip/checkip/compare/v0.15.0...v0.16.0) (2023-11-10)
 
 
