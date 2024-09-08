@@ -1,6 +1,7 @@
 {
   "name": "checkip",
   "private": true,
+  "type": "module",
   "version": "0.17.0",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs rollup.config.js",
