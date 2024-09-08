@@ -33,6 +33,7 @@ group :development do
   gem 'capistrano-rbenv', '2.2.0', require: false
   gem 'ed25519'
   gem 'i18n-tasks'
+  gem 'lefthook'
   gem 'net-ssh', require: 'net/ssh'
   gem 'pry-rails'
   gem 'rubocop', require: false
