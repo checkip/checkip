@@ -9,7 +9,7 @@ gem 'activemodel', '~> 7.2.1'
 # System
 gem 'bootsnap', '>= 1.10.2', require: false
 gem 'jsbundling-rails', '~> 1.0'
-gem 'propshaft', '~> 0.6'
+gem 'propshaft', '~> 1.0'
 gem 'puma', '~> 6.0'
 gem 'sd_notify', '~> 0.1.1', require: false
 
