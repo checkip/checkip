@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  allow_browser versions: :modern
+
   prepend_view_path Rails.root.join('frontend')
 
   def route_not_found
