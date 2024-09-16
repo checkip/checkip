@@ -121,7 +121,6 @@ GEM
       railties (>= 6.0.0)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
-    lefthook (1.7.15)
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -306,7 +305,6 @@ DEPENDENCIES
   fuubar
   i18n-tasks
   jsbundling-rails (~> 1.0)
-  lefthook
   lograge (~> 0.14)
   maxmind-db (~> 1.1)
   meta-rails (~> 2.0)
