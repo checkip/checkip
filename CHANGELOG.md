@@ -1,3 +1,13 @@
+# [0.18.0](https://github.com/checkip/checkip/compare/v0.17.0...v0.18.0) (2024-09-16)
+
+
+### Features
+
+* **core:** upgrade to rails 7.2.1 ([2856bae](https://github.com/checkip/checkip/commit/2856bae483215cb5b77675936453fd8dd502597d), [6734936](https://github.com/checkip/checkip/commit/6734936d0c9f2c06733d535ecca6f5f864b27cd8))
+* **core:** upgrade to ruby 3.3.5 ([e71acf1](https://github.com/checkip/checkip/commit/e71acf186ea20b1ac06a6273b63b3e02bc1138ea))
+
+
+
 # [0.17.0](https://github.com/checkip/checkip/compare/v0.16.0...v0.17.0) (2024-07-13)
 
 

@@ -2,7 +2,7 @@
   "name": "checkip",
   "private": true,
   "type": "module",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs rollup.config.js",
     "lint:css": "stylelint \"frontend/**/*.scss\"",
