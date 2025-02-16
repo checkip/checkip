@@ -27,9 +27,9 @@ gem 'elastic-apm', '~> 4.5'
 
 group :development do
   gem 'bcrypt_pbkdf'
-  gem 'capistrano', '3.19.1'
+  gem 'capistrano', '3.19.2'
   gem 'capistrano-maintenance', '1.2.1', require: false
-  gem 'capistrano-rails', '1.6.3', require: false
+  gem 'capistrano-rails', '1.7.0', require: false
   gem 'capistrano-rbenv', '2.2.0', require: false
   gem 'ed25519'
   gem 'i18n-tasks'
