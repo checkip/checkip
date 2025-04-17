@@ -18,7 +18,7 @@ gem 'lograge', '~> 0.14'
 
 # Other
 gem 'down', '~> 5.2', require: false
-gem 'maxmind-db', '~> 1.1'
+gem 'maxmind-db', '~> 1.3'
 gem 'meta-rails', '~> 2.0'
 gem 'rouge', '~> 4.0'
 
