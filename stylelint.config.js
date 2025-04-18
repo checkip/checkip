@@ -1,5 +1,6 @@
 export default {
-  extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],
+  ignoreDisables: true,
+  extends: ['stylelint-config-standard'],
   plugins: ['stylelint-prettier'],
   rules: {
     'prettier/prettier': true,

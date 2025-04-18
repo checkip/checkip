@@ -5,7 +5,7 @@ pre-commit:
       glob: "*.js"
       run: yarn eslint {staged_files}
     stylelint:
-      glob: "*.scss"
+      glob: "*.css"
       run: yarn stylelint {staged_files}
     rubocop:
       glob: "*.rb"
