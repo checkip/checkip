@@ -10,7 +10,7 @@ module DocumentationsHelper
     response << "# #{t('pages.documentation.api.snippet_httpie')}\n"
     response << "http -Fb #{request.host_with_port}"
 
-    response
+    response.strip
   end
 
   def snippet_api_json(data)
@@ -21,7 +21,7 @@ module DocumentationsHelper
     response << "curl -LH 'Accept: application/json' #{request.host_with_port}\n"
     response << JSON.pretty_generate(data)
 
-    response
+    response.strip
   end
 
   def snippet_api_filter(data)
@@ -36,6 +36,6 @@ module DocumentationsHelper
                   end
     end
 
-    response
+    response.strip
   end
 end

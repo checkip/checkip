@@ -1,5 +1,5 @@
-<% provide(:title, t('pages.documentation.api.title')) %>
-<% provide(:meta_description, t('pages.documentation.api.meta_description')) %>
-<%= render 'components/layout-default/layout-default' do %>
-  <%= render 'components/doc-api/doc-api', checker: @checker %>
+<% provide(:title, t("pages.documentation.api.title")) %>
+<% provide(:meta_description, t("pages.documentation.api.meta_description")) %>
+<%= render "components/layout-default/layout-default" do %>
+  <%= render "components/doc-api/doc-api", checker: @checker %>
 <% end %>

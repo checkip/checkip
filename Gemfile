@@ -8,6 +8,7 @@ gem 'activemodel', '~> 8.0.2'
 
 # System
 gem 'bootsnap', '>= 1.10.2', require: false
+gem 'cssbundling-rails', '~> 1.4'
 gem 'jsbundling-rails', '~> 1.0'
 gem 'propshaft', '~> 1.0'
 gem 'puma', '~> 6.0'

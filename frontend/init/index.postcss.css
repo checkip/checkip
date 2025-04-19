@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@import './stylesheets/highlight.postcss.css';
+
+@theme {
+  --color-brand-primary: #181926;
+  --color-brand-secondary: #91d7e3;
+  --color-brand-surface: #24273a;
+  --color-brand-on-primary: #cad3f5;
+  --color-brand-on-surface: #b8c0e0;
+  --color-brand-on-secondary: #c6a0f6;
+}

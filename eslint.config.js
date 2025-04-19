@@ -1,11 +1,19 @@
 import babelParser from '@babel/eslint-parser';
-import js from '@eslint/js';
 import globals from 'globals';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import js from '@eslint/js';
+import prettier from 'eslint-plugin-prettier/recommended';
 
-export default [
+import { defineConfig, globalIgnores } from 'eslint/config';
+import { includeIgnoreFile } from '@eslint/compat';
+import { fileURLToPath } from 'node:url';
+
+const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
+
+export default defineConfig([
+  globalIgnores(['coverage/', 'tmp/', 'vendor/']),
+  includeIgnoreFile(gitignorePath),
   js.configs.recommended,
-  eslintPluginPrettierRecommended,
+  prettier,
   {
     files: ['**/*.js'],
     linterOptions: {
@@ -25,16 +33,14 @@ export default [
       },
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
     },
     rules: {
-      curly: ['error', 'all'],
+      curly: ['error', 'multi'],
       'no-console': 'error',
       'no-template-curly-in-string': 'error',
       'no-var': 'error',
     },
   },
-  {
-    ignores: ['.coverage/*', '.tmp/*', '.vendor/*'],
-  },
-];
+]);

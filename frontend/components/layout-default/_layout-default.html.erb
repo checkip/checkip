@@ -1,55 +1,64 @@
-<div class="mdc-typography">
-  <aside class="mdc-drawer mdc-drawer--modal ckp-drawer">
-    <div class="mdc-drawer__content">
-      <nav class="mdc-deprecated-list">
-        <%= link_to root_path, class: "mdc-deprecated-list-item #{'mdc-deprecated-list-item--activated' if current_page?(root_path)}", tabindex: ('0' if current_page?(root_path)) do %>
-          <span class="mdc-deprecated-list-item__ripple"></span>
-          <i class="fas fa-home fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
-          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.brand') %></span>
-        <% end %>
-        <%= link_to api_path, class: "mdc-deprecated-list-item #{'mdc-deprecated-list-item--activated' if current_page?(api_path)}", tabindex: ('0' if current_page?(api_path)) do %>
-          <span class="mdc-deprecated-list-item__ripple"></span>
-          <i class="fas fa-code fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
-          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_api') %></span>
-        <% end %>
-        <a class="mdc-deprecated-list-item" href="#">
-          <span class="mdc-deprecated-list-item__ripple"></span>
-          <i class="fas fa-user-shield fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
-          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_terms') %></span>
-        </a>
-        <%= link_to t('pages.application.core.app_source'), class: "mdc-deprecated-list-item" do %>
-          <span class="mdc-deprecated-list-item__ripple"></span>
-          <i class="fab fa-github fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
-          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_github') %></span>
-        <% end %>
-        <%= link_to t('pages.application.core.menu_status_source'), class: "mdc-deprecated-list-item" do %>
-          <span class="mdc-deprecated-list-item__ripple"></span>
-          <i class="fas fa-signal fa-fw mdc-deprecated-list-item__graphic" aria-hidden="true"></i>
-          <span class="mdc-deprecated-list-item__text"><%= t('pages.application.core.menu_status') %></span>
-        <% end %>
-      </nav>
+<header>
+  <nav class="mx-auto flex max-w-4xl items-center justify-between p-4 lg:px-8">
+    <div class="flex lg:flex-1">
+      <%= link_to root_path, class: "-m-1.5 p-1.5 flex items-center focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary" do %>
+        <img class="h-8 w-auto" src="/favicon-32x32.png" alt="">
+        <span class="ml-3 text-lg font-mono text-brand-secondary"><%= t("pages.application.core.brand") %></span>
+      <% end %>
     </div>
-  </aside>
-  <div class="mdc-drawer-scrim"></div>
-  <header class="mdc-top-app-bar mdc-top-app-bar--fixed ckp-header-fixed">
-    <div class="mdc-top-app-bar__row">
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <div class="mdc-touch-target-wrapper">
-          <button class="mdc-top-app-bar__navigation-icon mdc-icon-button mdc-icon-button--touch">
-            <div class="mdc-icon-button__ripple"></div>
-            <i class="fas fa-bars fa-sm fa-fw ckp-icon-button"></i>
-            <div class="mdc-icon-button__touch"></div>
-          </button>
-        </div>
-        <span class="mdc-top-app-bar__title ckp-top-bar-title"><%= link_to t('pages.application.core.brand'), root_path %></span>
-      </section>
+    <div class="flex gap-x-8">
+      <%= link_to api_path, class: "text-sm/6 font-semibold text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary" do %>
+        <%= t("pages.application.core.menu_api") %>
+      <% end %>
+      <%= link_to t("pages.application.core.app_source"), class: "text-sm/6 font-semibold text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary" do %>
+        <%= t("pages.application.core.menu_github") %>
+      <% end %>
     </div>
-  </header>
-  <main class="ckp-layout-fixed">
-    <%= yield %>
-    <div class="ckp-powered-by">
-      <div class="mdc-typography--body2"><%= t('pages.application.core.made_with_html', heart: tag.span(tag.i(class: 'fas fa-heart'), class: 'ckp-heart-icon'), appname: app_name_footer) %></div>
-      <div class="mdc-typography--body2"><%= t('pages.application.core.ip_geolocation_by_html', db_source_url: link_to(t('pages.application.core.ip_geolocation_brand'), t('pages.application.core.ip_geolocation_source'))) %></div>
-    </div>
-  </main>
-</div>
+  </nav>
+</header>
+<main class="mx-auto max-w-4xl p-2 lg:px-8">
+  <%= yield %>
+</main>
+<footer class="text-center text-sm p-2">
+  <p class="py-0.5">
+    <%= t(
+      "pages.application.core.made_with_html",
+      heart: tag.span(tag.i(class: "fa-solid fa-heart"), class: "text-red-400"),
+      app_source_url: link_to(
+        app_name_footer,
+        t("pages.application.core.app_source"),
+        class: "text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary"
+      )
+    ) %>
+  </p>
+  <p class="py-0.5">
+    <%= t(
+      'pages.application.core.ip_geolocation_by_html',
+      db_source_url: link_to(
+        t('pages.application.core.ip_geolocation_brand'),
+        t('pages.application.core.ip_geolocation_source'),
+        class: "text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary"
+      )
+    ) %>
+  </p>
+  <p class="py-0.5">
+    <%= link_to(
+      t("pages.application.core.legal_terms"),
+      "#",
+      class: "text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary"
+    ) %>
+    <span class="px-0.5 text-brand-secondary">|</span>
+    <%= link_to(
+      t("pages.application.core.legal_privacy"),
+      "#",
+      class: "text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary"
+    ) %>
+    <span class="px-0.5 text-brand-secondary">|</span>
+    <%= link_to(
+      t("pages.application.core.system_status"),
+      t("pages.application.core.system_status_source"),
+      class: "text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary",
+      rel: "nofollow"
+    ) %>
+  </p>
+</footer>

@@ -1,0 +1,40 @@
+:root {
+  --pn-nord0: #2e3440;
+  --ss-nord4: #d8dee9;
+  --fr-nord8: #88c0d0;
+  --fr-nord10: #5e81ac;
+  --au-nord13: #ebcb8b;
+  --au-nord14: #a3be8c;
+}
+
+/* .ckp-highlight {
+  background-color: var(--pn-nord0);
+} */
+
+.ckp-highlight .c {
+  color: var(--fr-nord10);
+}
+
+.ckp-highlight .p {
+  color: var(--ss-nord4);
+}
+
+.ckp-highlight .nl {
+  color: var(--fr-nord8);
+}
+
+.ckp-highlight .nt {
+  color: var(--au-nord13);
+}
+
+.ckp-highlight .s2 {
+  color: var(--au-nord14);
+}
+
+.ckp-highlight .se {
+  color: var(--au-nord13);
+}
+
+.ckp-highlight .w {
+  color: #bbb;
+}

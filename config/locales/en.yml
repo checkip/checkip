@@ -6,23 +6,24 @@ en:
         app: CheckIP
         app_source: https://github.com/checkip/checkip
         brand: CheckIP.info
-        button_copy: Copy
+        button_copy: Copy to clipboard
         ip_geolocation_brand: DB-IP
         ip_geolocation_by_html: IP Geolocation by %{db_source_url}
         ip_geolocation_source: https://db-ip.com
-        made_with_html: Made with %{heart} and %{appname}
-        menu_api: Documentation
+        legal_privacy: Privacy Policy
+        legal_terms: Terms & Conditions
+        made_with_html: Made with %{heart} and %{app_source_url}
+        menu_api: API
         menu_github: GitHub
-        menu_status: Status
-        menu_status_source: https://status.checkip.info/
-        menu_terms: Privacy and Terms
-        meta_description: Tool to find geolocation and other information about any IP v4 and v6 address.
-        service_api_description: Comprehensive information about any IPv4 or IPv6 address with JSON API over HTTPS.
-        service_api_header: Fast and secure
-        service_price_description: Free of charge for personal and commercial use, including an on-premise solution.
-        service_price_header: Free
-        service_privacy_description: Website and API access are entirely anonymous and not tracked by any 3-rd parties.
-        service_privacy_header: Privacy-oriented
+        meta_description: Free IP geolocation lookup. Get detailed location data and network information for any IPv4 or IPv6 address. Open-source, secure, and privacy-focused.
+        service_api_description: Access IPv4 and IPv6 data through a web interface or integrate seamlessly via secure JSON API over HTTPS.
+        service_api_header: Fast and Secure
+        service_price_description: Free for personal and commercial use, with source code available under the permissive MIT license.
+        service_price_header: Open Source
+        service_privacy_description: Website and API access are entirely anonymous with zero tracking by us or any third parties.
+        service_privacy_header: Privacy-Focused
+        system_status: Status
+        system_status_source: https://status.checkip.info/
     documentation:
       api:
         authentication: Authentication

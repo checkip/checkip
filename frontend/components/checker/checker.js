@@ -1,10 +1,20 @@
-import { MDCRipple } from '@material/ripple';
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.ckp-button-clipboard');
+  if (!btn) return;
+  const icon = btn.querySelector('.ckp-icon-clipboard');
+  if (!icon) return;
 
-if (document.querySelector('.ckp-button-clipboard')) {
-  const demoCopy = document.querySelector('.ckp-button-clipboard');
-  MDCRipple.attachTo(demoCopy);
+  btn.onclick = async () => {
+    const target = document.getElementById(btn.dataset.clipboardTarget);
+    if (!target) return;
+    await navigator.clipboard.writeText(target.innerText);
 
-  demoCopy.addEventListener('click', () => {
-    navigator.clipboard.writeText(demoCopy.dataset.clipboard);
-  });
-}
+    icon.innerHTML = '<i class="fa-solid fa-check"></i>';
+    window.FontAwesome?.dom?.i2svg?.();
+
+    setTimeout(() => {
+      icon.innerHTML = '<i class="fa-regular fa-copy"></i>';
+      window.FontAwesome?.dom?.i2svg?.();
+    }, 5000);
+  };
+});

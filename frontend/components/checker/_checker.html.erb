@@ -1,25 +1,31 @@
-<div class="mdc-layout-grid">
-  <div class="mdc-layout-grid__inner">
-    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="ckp-snippet-box ckp-highlight mdc-elevation--z4">
-        <pre><%= raw rougify(jsonify(@checker), 'json') %></pre>
-        <button class="mdc-button mdc-button--unelevated ckp-button-clipboard" data-clipboard="<%= jsonify(@checker) %>">
-          <span class="mdc-button__ripple"></span>
-          <span class="mdc-button__label"><%= t('pages.application.core.button_copy') %></span>
-        </button>
-      </div>
-    </div>
-    <div class="mdc-layout-grid__cell ckp-text-box mdc-elevation--z4">
-      <div class="mdc-typography--headline6 ckp-description-header"><%= t('pages.application.core.service_api_header') %></div>
-      <span class="mdc-typography--body2"><%= t('pages.application.core.service_api_description') %></span>
-    </div>
-    <div class="mdc-layout-grid__cell ckp-text-box mdc-elevation--z4">
-      <div class="mdc-typography--headline6 ckp-description-header "><%= t('pages.application.core.service_privacy_header') %></div>
-      <span class="mdc-typography--body2"><%= t('pages.application.core.service_privacy_description') %></span>
-    </div>
-    <div class="mdc-layout-grid__cell ckp-text-box mdc-elevation--z4">
-      <div class="mdc-typography--headline6 ckp-description-header"><%= t('pages.application.core.service_price_header') %></div>
-      <span class="mdc-typography--body2"><%= t('pages.application.core.service_price_description') %></span>
-    </div>
+<div class="ckp-highlight w-full shadow-lg rounded-md p-4 bg-brand-surface relative">
+  <button
+    type="button"
+    class="ckp-button-clipboard absolute top-3 right-3 px-3 py-1 rounded bg-brand-secondary text-brand-primary text-xs cursor-pointer hover:bg-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary"
+    title="<%= t("pages.application.core.button_copy") %>"
+    data-clipboard-target="cip-data-json"
+  >
+    <span class="ckp-icon-clipboard"><i class="fa-regular fa-copy"></i></span>
+  </button>
+  <div id="cip-data-json" class="font-mono whitespace-pre-wrap"><%= raw rougify(jsonify(@checker), "json") %></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 w-full">
+  <div class="shadow-lg rounded-md p-4 bg-brand-surface text-brand-on-surface">
+    <p class="py-0.5">
+      <div class="text-lg text-center"><%= t("pages.application.core.service_api_header") %></div>
+      <div class="text-sm text-center"><%= t("pages.application.core.service_api_description") %></div>
+    </p>
+  </div>
+  <div class="shadow-lg rounded-md p-4 bg-brand-surface text-brand-on-surface">
+    <p class="py-0.5 text-center">
+      <div class="text-lg text-center"><%= t("pages.application.core.service_privacy_header") %></div>
+      <div class="text-sm text-center"><%= t("pages.application.core.service_privacy_description") %></div>
+    </p>
+  </div>
+  <div class="shadow-lg rounded-md p-4 bg-brand-surface text-brand-on-surface">
+    <p class="py-0.5 text-center">
+      <div class="text-lg text-center"><%= t("pages.application.core.service_price_header") %></div>
+      <div class="text-sm text-center"><%= t("pages.application.core.service_price_description") %></div>
+    </p>
   </div>
 </div>
