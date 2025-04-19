@@ -18,7 +18,7 @@ en:
         meta_description: Free IP geolocation lookup. Get detailed location data and network information for any IPv4 or IPv6 address. Open-source, secure, and privacy-focused.
         service_api_description: Access IPv4 and IPv6 data through a web interface or integrate seamlessly via secure JSON API over HTTPS.
         service_api_header: Fast and Secure
-        service_price_description: Free for personal and commercial use, with source code available under the permissive MIT license.
+        service_price_description: Free for personal and commercial use, with source code available under the permissive BSD 3-Clause license.
         service_price_header: Open Source
         service_privacy_description: Website and API access are entirely anonymous with zero tracking by us or any third parties.
         service_privacy_header: Privacy-Focused
