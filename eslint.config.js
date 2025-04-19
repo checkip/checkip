@@ -37,7 +37,7 @@ export default defineConfig([
       },
     },
     rules: {
-      curly: ['error', 'all'],
+      curly: ['error', 'multi'],
       'no-console': 'error',
       'no-template-curly-in-string': 'error',
       'no-var': 'error',

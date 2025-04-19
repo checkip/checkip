@@ -4,19 +4,20 @@
   "type": "module",
   "version": "0.18.0",
   "scripts": {
+    "browser-sync": "browser-sync start --proxy localhost:3000 --files 'app/assets/builds/**/*, app/views/**/*.html.erb, frontend/**/*.html.erb, config/locales/**/*.yml' --no-inject-changes --no-notify",
     "build": "rollup -c --bundleConfigAsCjs rollup.config.js",
     "build:css": "postcss ./frontend/packs/application.postcss.css -o ./app/assets/builds/application.css",
+    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint:css": "stylelint \"**/*.css\" --ignore-path .gitignore --ignore-pattern \"vendor/**/*.css\"",
     "lint:js": "eslint",
     "lint:ruby": "bundle exec rubocop",
-    "lint": "npm-run-all --parallel --continue-on-error lint:*",
-    "changelog:build": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "lint": "npm-run-all --parallel --continue-on-error lint:*"
   },
   "dependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-node-resolve": "^16.0.0",
@@ -34,6 +35,7 @@
     "@commitlint/config-conventional": "^19.1.0",
     "@eslint/compat": "^1.2.8",
     "@eslint/js": "^9.24.0",
+    "browser-sync": "^3.0.4",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^10.0.1",

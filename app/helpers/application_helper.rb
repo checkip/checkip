@@ -6,16 +6,10 @@ module ApplicationHelper
   end
 
   def app_name_footer
-    link_to full_app_name, t('pages.application.core.app_source')
-  end
-
-  private
-
-    def full_app_name
-      if ENV['CHECKIP_SHOW_VERSION'] == 'true'
-        t('pages.application.core.app') + " v#{Checkip::Application::VERSION}"
-      else
-        t('pages.application.core.app')
-      end
+    if ENV['CHECKIP_SHOW_VERSION'] == 'true'
+      t('pages.application.core.app') + " v#{Checkip::Application::VERSION}"
+    else
+      t('pages.application.core.app')
     end
+  end
 end
