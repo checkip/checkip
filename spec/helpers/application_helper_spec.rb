@@ -16,4 +16,27 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(helper.app_name_footer).to eq 'CheckIP v1.0'
     end
   end
+
+  describe '#app_geolocation_source' do
+    context 'when dbip' do
+      before do
+        allow(ENV).to receive(:fetch).with('MMDB_PROVIDER').and_return('dbip')
+      end
+
+      it 'returns dbip data' do
+        expect(helper.app_geolocation_source)
+          .to eq({ 'name' => 'DB-IP', 'url' => 'https://db-ip.com' })
+      end
+    end
+
+    context 'when other' do
+      before do
+        allow(ENV).to receive(:fetch).with('MMDB_PROVIDER').and_return('maxmind')
+      end
+
+      it 'returns nil' do
+        expect(helper.app_geolocation_source).to be_nil
+      end
+    end
+  end
 end

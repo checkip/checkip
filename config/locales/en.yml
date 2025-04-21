@@ -7,9 +7,7 @@ en:
         app_source: https://github.com/checkip/checkip
         brand: CheckIP.info
         button_copy: Copy to clipboard
-        ip_geolocation_brand: DB-IP
         ip_geolocation_by_html: IP Geolocation by %{db_source_url}
-        ip_geolocation_source: https://db-ip.com
         legal_privacy: Privacy Policy
         legal_terms: Terms & Conditions
         made_with_html: Made with %{heart} and %{app_source_url}

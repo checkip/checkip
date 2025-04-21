@@ -12,4 +12,11 @@ module ApplicationHelper
       t('pages.application.core.app')
     end
   end
+
+  def app_geolocation_source
+    case ENV.fetch('MMDB_PROVIDER')
+    when 'dbip'
+      { 'name' => 'DB-IP', 'url' => 'https://db-ip.com' }
+    end
+  end
 end

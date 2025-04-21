@@ -35,8 +35,8 @@
     <%= t(
       'pages.application.core.ip_geolocation_by_html',
       db_source_url: link_to(
-        t('pages.application.core.ip_geolocation_brand'),
-        t('pages.application.core.ip_geolocation_source'),
+        app_geolocation_source['name'],
+        app_geolocation_source['url'],
         class: "text-brand-secondary hover:text-brand-on-secondary focus:outline-2 focus:outline-offset-2 focus:outline-brand-secondary"
       )
     ) %>
