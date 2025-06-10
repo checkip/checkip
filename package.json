@@ -42,7 +42,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^16.0.0",
     "lefthook": "^1.7.15",
-    "npm-run-all2": "^7.0.2",
+    "npm-run-all2": "^8.0.4",
     "prettier": "^3.0.1",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^38.0.0",
