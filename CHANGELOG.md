@@ -1,3 +1,20 @@
+# [0.19.0](https://github.com/checkip/checkip/compare/v0.18.0...v0.19.0) (2025-12-31)
+
+
+### Bug Fixes
+
+* **core:** remove wrong config entry ([af7a9c2](https://github.com/checkip/checkip/commit/af7a9c2c3ce61d17ef19a60c88cb2b6d6650a8db))
+
+
+### Features
+
+* **core:** geolocation source details from environment variable ([8dfa8c7](https://github.com/checkip/checkip/commit/8dfa8c72c75875e0b749a68aed1ff252b84de9ee))
+* **core:** replace material-components-web with tailwind ([#59](https://github.com/checkip/checkip/issues/59)) ([4ff58d6](https://github.com/checkip/checkip/commit/4ff58d6dedbfbec328c0e6a43eea3db88f57a7bd))
+* **core:** upgrade to rails 8.0 ([055ac83](https://github.com/checkip/checkip/commit/055ac8352cc09f01323561be1c41fa47bdb6744a))
+* **core:** upgrade to ruby 3.4.2 ([67fe63a](https://github.com/checkip/checkip/commit/67fe63a63e3cfb8119fcf6f96aa99d40a907c166))
+
+
+
 # [0.18.0](https://github.com/checkip/checkip/compare/v0.17.0...v0.18.0) (2024-09-16)
 
 

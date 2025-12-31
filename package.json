@@ -2,7 +2,7 @@
   "name": "checkip",
   "private": true,
   "type": "module",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "scripts": {
     "browser-sync": "browser-sync start --proxy localhost:3000 --files 'app/assets/builds/**/*, app/views/**/*.html.erb, frontend/**/*.html.erb, config/locales/**/*.yml' --no-inject-changes --no-notify",
     "build": "rollup -c --bundleConfigAsCjs rollup.config.js",
