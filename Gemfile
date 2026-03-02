@@ -11,7 +11,7 @@ gem 'bootsnap', '>= 1.10.2', require: false
 gem 'cssbundling-rails', '~> 1.4'
 gem 'jsbundling-rails', '~> 1.0'
 gem 'propshaft', '~> 1.0'
-gem 'puma', '~> 6.0'
+gem 'puma', '~> 7.0'
 gem 'sd_notify', '~> 0.1.1', require: false
 
 # Logs
@@ -28,7 +28,7 @@ gem 'elastic-apm', '~> 4.5'
 
 group :development do
   gem 'bcrypt_pbkdf'
-  gem 'capistrano', '3.19.2'
+  gem 'capistrano', '3.20.0'
   gem 'capistrano-maintenance', '1.2.1', require: false
   gem 'capistrano-rails', '1.7.0', require: false
   gem 'capistrano-rbenv', '2.2.0', require: false
