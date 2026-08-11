@@ -1,8 +1,8 @@
-const production = process.env.NODE_ENV === 'production';
+const production = process.env.NODE_ENV === 'production' || process.env.RAILS_ENV === 'production';
 
 export default {
   plugins: {
-    '@tailwindcss/postcss': {},
+    '@tailwindcss/postcss': { optimize: production },
   },
   map: !production && {
     inline: false,
