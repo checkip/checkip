@@ -7,28 +7,28 @@ ruby file: '.ruby-version'
 gem 'activemodel', '~> 8.1.3'
 
 # System
-gem 'bootsnap', '>= 1.10.2', require: false
+gem 'bootsnap', '>= 1.25.0', require: false
 gem 'cssbundling-rails', '~> 1.4'
-gem 'jsbundling-rails', '~> 1.0'
-gem 'propshaft', '~> 1.0'
-gem 'puma', '~> 7.0'
+gem 'jsbundling-rails', '~> 1.3'
+gem 'propshaft', '~> 1.3'
+gem 'puma', '~> 8.0'
 gem 'sd_notify', '~> 0.1.1', require: false
 
 # Logs
-gem 'lograge', '~> 0.14'
+gem 'lograge', '~> 0.15'
 
 # Other
-gem 'down', '~> 5.2', require: false
-gem 'maxmind-db', '~> 1.3'
+gem 'down', '~> 5.6', require: false
+gem 'maxmind-db', '~> 1.4'
 gem 'meta-rails', '~> 2.0'
-gem 'rouge', '~> 4.0'
+gem 'rouge', '~> 5.1'
 
 # Monitoring
-gem 'elastic-apm', '~> 4.5'
+gem 'elastic-apm', '< 4.9'
 
 group :development do
   gem 'bcrypt_pbkdf'
-  gem 'capistrano', '3.20.0'
+  gem 'capistrano', '3.20.1'
   gem 'capistrano-maintenance', '1.2.1', require: false
   gem 'capistrano-rails', '1.7.0', require: false
   gem 'capistrano-rbenv', '2.2.0', require: false
